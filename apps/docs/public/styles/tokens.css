@@ -1,0 +1,216 @@
+/**
+ * Accessible UI Kit - Design Tokens
+ *
+ * CSS Custom Properties for consistent design.
+ * Follows WCAG 2.1 AA contrast requirements.
+ *
+ * Usage: var(--color-primary), var(--space-md), etc.
+ */
+
+:root {
+  /* ========================================
+     COLOR PALETTE - Light Theme (Default)
+     ======================================== */
+
+  /* Primary colors - Blue */
+  --color-primary: #0066cc;
+  --color-primary-hover: #0052a3;
+  --color-primary-active: #003d7a;
+  --color-on-primary: #ffffff;
+
+  /* Secondary colors - Gray */
+  --color-secondary: #6b7280;
+  --color-secondary-hover: #4b5563;
+  --color-secondary-active: #374151;
+  --color-on-secondary: #ffffff;
+
+  /* Semantic colors */
+  --color-success: #059669;
+  --color-success-light: #d1fae5;
+  --color-warning: #d97706;
+  --color-warning-light: #fef3c7;
+  --color-error: #dc2626;
+  --color-error-light: #fee2e2;
+  --color-info: #0284c7;
+  --color-info-light: #e0f2fe;
+
+  /* Background & Surface */
+  --color-background: #ffffff;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+
+  /* Text colors - Meet WCAG AA (4.5:1 ratio) */
+  --color-text-primary: #111827;
+  --color-text-secondary: #4b5563;
+  --color-text-disabled: #9ca3af;
+  --color-text-inverse: #ffffff;
+
+  /* Border colors */
+  --color-border: #d1d5db;
+  --color-border-hover: #9ca3af;
+  --color-border-focus: #0066cc;
+
+  /* Focus indicator - High visibility */
+  --color-focus: #0066cc;
+  --color-focus-ring: rgba(0, 102, 204, 0.4);
+
+  /* Code blocks */
+  --color-code-bg: #f3f4f6;
+  --color-code-text: #1f2937;
+
+  /* ========================================
+     SPACING SCALE
+     ======================================== */
+
+  --space-xs: 0.25rem;   /* 4px */
+  --space-sm: 0.5rem;    /* 8px */
+  --space-md: 1rem;      /* 16px */
+  --space-lg: 1.5rem;    /* 24px */
+  --space-xl: 2rem;      /* 32px */
+  --space-2xl: 3rem;     /* 48px */
+  --space-3xl: 4rem;     /* 64px */
+
+  /* ========================================
+     TYPOGRAPHY
+     ======================================== */
+
+  /* Font family - System fonts for performance */
+  --font-family-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-family-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas,
+    'Liberation Mono', monospace;
+
+  /* Font sizes */
+  --font-size-xs: 0.75rem;   /* 12px */
+  --font-size-sm: 0.875rem;  /* 14px */
+  --font-size-md: 1rem;      /* 16px */
+  --font-size-lg: 1.125rem;  /* 18px */
+  --font-size-xl: 1.25rem;   /* 20px */
+  --font-size-2xl: 1.5rem;   /* 24px */
+  --font-size-3xl: 1.875rem; /* 30px */
+  --font-size-4xl: 2.25rem;  /* 36px */
+
+  /* Font weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Line heights */
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+
+  /* ========================================
+     BORDER RADIUS
+     ======================================== */
+
+  --radius-none: 0;
+  --radius-sm: 0.25rem;   /* 4px */
+  --radius-md: 0.5rem;    /* 8px */
+  --radius-lg: 0.75rem;   /* 12px */
+  --radius-xl: 1rem;      /* 16px */
+  --radius-full: 9999px;
+
+  /* ========================================
+     SHADOWS
+     ======================================== */
+
+  --shadow-none: none;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  /* ========================================
+     Z-INDEX SCALE
+     ======================================== */
+
+  --z-dropdown: 1000;
+  --z-sticky: 1100;
+  --z-modal: 1200;
+  --z-popover: 1300;
+  --z-tooltip: 1400;
+
+  /* ========================================
+     TRANSITIONS
+     ======================================== */
+
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow: 400ms ease;
+
+  /* ========================================
+     FOCUS STYLES
+     ======================================== */
+
+  --focus-ring-width: 2px;
+  --focus-ring-offset: 2px;
+  --focus-ring-style: solid;
+}
+
+/* ========================================
+   DARK THEME
+   ======================================== */
+
+[data-theme='dark'] {
+  /* Primary colors */
+  --color-primary: #60a5fa;
+  --color-primary-hover: #93c5fd;
+  --color-primary-active: #bfdbfe;
+  --color-on-primary: #1e3a5f;
+
+  /* Secondary colors */
+  --color-secondary: #9ca3af;
+  --color-secondary-hover: #d1d5db;
+  --color-secondary-active: #e5e7eb;
+  --color-on-secondary: #1f2937;
+
+  /* Semantic colors */
+  --color-success: #34d399;
+  --color-success-light: #064e3b;
+  --color-warning: #fbbf24;
+  --color-warning-light: #78350f;
+  --color-error: #f87171;
+  --color-error-light: #7f1d1d;
+  --color-info: #38bdf8;
+  --color-info-light: #0c4a6e;
+
+  /* Background & Surface */
+  --color-background: #111827;
+  --color-surface: #1f2937;
+  --color-surface-hover: #374151;
+  --color-surface-active: #4b5563;
+
+  /* Text colors */
+  --color-text-primary: #f9fafb;
+  --color-text-secondary: #d1d5db;
+  --color-text-disabled: #6b7280;
+  --color-text-inverse: #111827;
+
+  /* Border colors */
+  --color-border: #374151;
+  --color-border-hover: #4b5563;
+  --color-border-focus: #60a5fa;
+
+  /* Focus */
+  --color-focus: #60a5fa;
+  --color-focus-ring: rgba(96, 165, 250, 0.4);
+
+  /* Code blocks */
+  --color-code-bg: #1f2937;
+  --color-code-text: #e5e7eb;
+}
+
+/* ========================================
+   REDUCED MOTION
+   Respect user preferences for animations
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-fast: 0ms;
+    --transition-normal: 0ms;
+    --transition-slow: 0ms;
+  }
+}

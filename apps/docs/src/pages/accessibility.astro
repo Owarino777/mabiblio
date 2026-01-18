@@ -1,0 +1,208 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Accessibility - Accessible UI Kit">
+  <main id="main-content" class="docs-page">
+    <article class="docs-content">
+      <h1>Accessibility</h1>
+      <p class="lead">
+        Our commitment to making the web usable for everyone.
+      </p>
+
+      <section id="standards" aria-labelledby="standards-heading">
+        <h2 id="standards-heading">Standards We Follow</h2>
+        <p>
+          All components are designed to meet or exceed:
+        </p>
+        <ul>
+          <li><strong>WCAG 2.1 Level AA</strong> — Web Content Accessibility Guidelines</li>
+          <li><strong>RGAA 4.1</strong> — Référentiel Général d'Amélioration de l'Accessibilité (French standard)</li>
+          <li><strong>WAI-ARIA 1.2</strong> — When native HTML isn't sufficient</li>
+        </ul>
+      </section>
+
+      <section id="principles" aria-labelledby="principles-heading">
+        <h2 id="principles-heading">Our Principles</h2>
+
+        <h3>1. Semantic HTML First</h3>
+        <p>
+          We use the right HTML elements for the job. A button is a <code>&lt;button&gt;</code>,
+          not a styled <code>&lt;div&gt;</code>. This gives us keyboard support, focus management,
+          and screen reader announcements for free.
+        </p>
+
+        <h3>2. Keyboard Navigation</h3>
+        <p>
+          Every interactive component works with keyboard only:
+        </p>
+        <ul>
+          <li><kbd>Tab</kbd> moves between focusable elements</li>
+          <li><kbd>Enter</kbd> and <kbd>Space</kbd> activate buttons and links</li>
+          <li><kbd>Arrow keys</kbd> navigate within composite widgets</li>
+          <li><kbd>Escape</kbd> closes modals and dropdowns</li>
+        </ul>
+
+        <h3>3. Visible Focus</h3>
+        <p>
+          Focus indicators are never hidden. Our default focus ring is a 2px solid outline
+          with 2px offset, using the primary brand color for visibility.
+        </p>
+
+        <h3>4. Color Is Not Enough</h3>
+        <p>
+          We never rely on color alone to convey information. Error states use icons,
+          text, and color together. Links are underlined by default.
+        </p>
+
+        <h3>5. Respect User Preferences</h3>
+        <p>
+          Components respect system preferences:
+        </p>
+        <ul>
+          <li><code>prefers-reduced-motion</code> — Disables animations</li>
+          <li><code>prefers-color-scheme</code> — Supports light/dark themes</li>
+          <li>Browser font size settings — All sizes use relative units</li>
+        </ul>
+
+        <h3>6. ARIA: Use Sparingly</h3>
+        <p>
+          The first rule of ARIA is "don't use ARIA" if native HTML works.
+          We only add ARIA attributes when necessary, and we ensure they're correct.
+        </p>
+      </section>
+
+      <section id="testing" aria-labelledby="testing-heading">
+        <h2 id="testing-heading">How We Test</h2>
+
+        <h3>Automated Testing</h3>
+        <ul>
+          <li><strong>axe-core</strong> — Catches common violations</li>
+          <li><strong>Playwright</strong> — Keyboard navigation testing</li>
+          <li><strong>Lighthouse</strong> — Accessibility audits in CI</li>
+        </ul>
+
+        <h3>Manual Testing</h3>
+        <ul>
+          <li>Keyboard-only navigation</li>
+          <li>Screen reader testing (NVDA, VoiceOver)</li>
+          <li>High contrast mode</li>
+          <li>200% zoom</li>
+          <li>Reduced motion</li>
+        </ul>
+      </section>
+
+      <section id="checklist" aria-labelledby="checklist-heading">
+        <h2 id="checklist-heading">Component Checklist</h2>
+        <p>
+          Every component must pass this checklist before release:
+        </p>
+        <ul class="checklist">
+          <li>Uses semantic HTML elements</li>
+          <li>Works with keyboard only</li>
+          <li>Has visible focus indicator</li>
+          <li>Meets color contrast requirements (4.5:1 for text, 3:1 for UI)</li>
+          <li>Works at 200% zoom</li>
+          <li>Has accessible name (visible or via aria-label)</li>
+          <li>Announces state changes to screen readers</li>
+          <li>Respects prefers-reduced-motion</li>
+          <li>Passes axe-core automated tests</li>
+          <li>Tested with at least one screen reader</li>
+        </ul>
+      </section>
+
+      <section id="resources" aria-labelledby="resources-heading">
+        <h2 id="resources-heading">Resources</h2>
+        <ul>
+          <li><a href="https://www.w3.org/WAI/WCAG21/quickref/" target="_blank" rel="noopener">WCAG 2.1 Quick Reference</a></li>
+          <li><a href="https://accessibilite.numerique.gouv.fr/" target="_blank" rel="noopener">RGAA (French)</a></li>
+          <li><a href="https://www.w3.org/WAI/ARIA/apg/" target="_blank" rel="noopener">ARIA Authoring Practices Guide</a></li>
+          <li><a href="https://webaim.org/" target="_blank" rel="noopener">WebAIM</a></li>
+          <li><a href="https://a11yproject.com/" target="_blank" rel="noopener">The A11Y Project</a></li>
+        </ul>
+      </section>
+    </article>
+  </main>
+</BaseLayout>
+
+<style>
+  .docs-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--space-lg);
+  }
+
+  .docs-content h1 {
+    font-size: var(--font-size-4xl);
+    margin-bottom: var(--space-md);
+  }
+
+  .lead {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-2xl);
+  }
+
+  .docs-content section {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .docs-content h2 {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--space-md);
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .docs-content section:first-of-type h2 {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .docs-content h3 {
+    font-size: var(--font-size-lg);
+    margin-top: var(--space-lg);
+    margin-bottom: var(--space-sm);
+  }
+
+  .docs-content p {
+    line-height: var(--line-height-relaxed);
+    margin-bottom: var(--space-md);
+  }
+
+  .docs-content ul {
+    margin-bottom: var(--space-md);
+    padding-left: var(--space-xl);
+  }
+
+  .docs-content li {
+    margin-bottom: var(--space-xs);
+    line-height: var(--line-height-relaxed);
+  }
+
+  kbd {
+    display: inline-block;
+    padding: 0.125em 0.5em;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-family-mono);
+    font-size: 0.9em;
+  }
+
+  .checklist {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .checklist li {
+    padding-left: var(--space-lg);
+    position: relative;
+  }
+
+  .checklist li::before {
+    content: '☐';
+    position: absolute;
+    left: 0;
+  }
+</style>

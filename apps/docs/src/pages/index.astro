@@ -1,0 +1,213 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Accessible UI Kit - Web Components Done Right">
+  <main id="main-content" class="home">
+    <section class="hero">
+      <h1>Accessible UI Kit</h1>
+      <p class="hero-tagline">
+        A component library built for <strong>accessibility</strong>,
+        <strong>eco-design</strong>, and <strong>privacy</strong>.
+      </p>
+      <p class="hero-description">
+        Web platform-first components with full keyboard navigation, WCAG 2.1 AA compliance,
+        minimal JavaScript, and zero tracking.
+      </p>
+      <div class="hero-actions">
+        <a href="/getting-started" class="btn btn-primary">Get Started</a>
+        <a href="/components" class="btn btn-secondary">View Components</a>
+      </div>
+    </section>
+
+    <section class="features" aria-labelledby="features-heading">
+      <h2 id="features-heading" class="visually-hidden">Key Features</h2>
+      <div class="features-grid">
+        <article class="feature-card">
+          <h3>♿ Accessibility First</h3>
+          <p>
+            RGAA & WCAG 2.1 AA compliant. Full keyboard navigation, visible focus,
+            semantic HTML, and proper ARIA when needed.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <h3>🌱 Eco-Design</h3>
+          <p>
+            Minimal JavaScript, no heavy dependencies, system fonts by default,
+            optimized assets. Built following RGESN principles.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <h3>🔒 Privacy Friendly</h3>
+          <p>
+            Zero tracking by default, no third-party analytics, no unnecessary cookies.
+            GDPR compliant out of the box.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <h3>📦 Copy & Paste Ready</h3>
+          <p>
+            Plain HTML, CSS, and JavaScript. No framework required.
+            Just copy the code and use it in any project.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <h3>🧪 Tested</h3>
+          <p>
+            Unit tests, E2E tests, and automated accessibility checks.
+            Every component is validated before release.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <h3>📚 Documented</h3>
+          <p>
+            Complete documentation with usage examples, accessibility notes,
+            do's and don'ts, and performance considerations.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="principles" aria-labelledby="principles-heading">
+      <h2 id="principles-heading">Our Principles</h2>
+      <dl class="principles-list">
+        <div class="principle">
+          <dt>Native First</dt>
+          <dd>
+            We prefer native HTML elements over custom implementations.
+            A <code>&lt;button&gt;</code> beats a <code>&lt;div role="button"&gt;</code>.
+          </dd>
+        </div>
+        <div class="principle">
+          <dt>Progressive Enhancement</dt>
+          <dd>
+            Core functionality works without JavaScript. Enhanced experiences
+            layer on top for capable browsers.
+          </dd>
+        </div>
+        <div class="principle">
+          <dt>Transparency</dt>
+          <dd>
+            Every component documents its limitations, known issues,
+            and accessibility considerations honestly.
+          </dd>
+        </div>
+      </dl>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .home {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--space-lg);
+  }
+
+  .hero {
+    text-align: center;
+    padding: var(--space-2xl) 0;
+  }
+
+  .hero h1 {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--space-md);
+    color: var(--color-text-primary);
+  }
+
+  .hero-tagline {
+    font-size: var(--font-size-xl);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-sm);
+  }
+
+  .hero-description {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+    max-width: 600px;
+    margin: 0 auto var(--space-xl);
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: var(--space-md);
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .features {
+    padding: var(--space-2xl) 0;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-lg);
+  }
+
+  .feature-card {
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+  }
+
+  .feature-card h3 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-sm);
+    color: var(--color-text-primary);
+  }
+
+  .feature-card p {
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-relaxed);
+  }
+
+  .principles {
+    padding: var(--space-2xl) 0;
+  }
+
+  .principles h2 {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--space-xl);
+    text-align: center;
+  }
+
+  .principles-list {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .principle {
+    margin-bottom: var(--space-lg);
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border-radius: var(--radius-md);
+  }
+
+  .principle dt {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-xs);
+  }
+
+  .principle dd {
+    color: var(--color-text-secondary);
+    margin: 0;
+    line-height: var(--line-height-relaxed);
+  }
+
+  .principle code {
+    background: var(--color-code-bg);
+    padding: 0.125em 0.375em;
+    border-radius: var(--radius-sm);
+    font-size: 0.9em;
+  }
+</style>

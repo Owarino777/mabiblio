@@ -1,0 +1,115 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Legal - Accessible UI Kit">
+  <main id="main-content" class="docs-page">
+    <article class="docs-content">
+      <h1>Legal Notice</h1>
+
+      <section>
+        <h2>License</h2>
+        <p>
+          Accessible UI Kit is released under the <strong>MIT License</strong>.
+        </p>
+        <p>
+          You are free to:
+        </p>
+        <ul>
+          <li>Use the components in personal and commercial projects</li>
+          <li>Modify the code to suit your needs</li>
+          <li>Distribute the code as part of your projects</li>
+        </ul>
+        <p>
+          The only requirement is to include the original copyright notice
+          and license text in any copy of the software.
+        </p>
+        <p>
+          <a href="https://github.com/your-org/accessible-ui-kit/blob/main/LICENSE" target="_blank" rel="noopener">
+            View full license →
+          </a>
+        </p>
+      </section>
+
+      <section>
+        <h2>Disclaimer</h2>
+        <p>
+          THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
+        </p>
+        <p>
+          While we strive to make our components as accessible as possible,
+          we cannot guarantee full compliance with all accessibility standards
+          in all contexts. It is your responsibility to test and validate
+          accessibility in your specific implementation.
+        </p>
+      </section>
+
+      <section>
+        <h2>Trademarks</h2>
+        <p>
+          "Accessible UI Kit" is not affiliated with, endorsed by, or
+          sponsored by any other organization. All other trademarks mentioned
+          belong to their respective owners.
+        </p>
+      </section>
+
+      <section>
+        <h2>Contributing</h2>
+        <p>
+          By contributing to this project, you agree that your contributions
+          will be licensed under the MIT License.
+        </p>
+        <p>
+          <a href="https://github.com/your-org/accessible-ui-kit/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">
+            Contribution guidelines →
+          </a>
+        </p>
+      </section>
+
+      <section>
+        <h2>Contact</h2>
+        <p>
+          For legal inquiries, please open an issue on our
+          <a href="https://github.com/your-org/accessible-ui-kit" target="_blank" rel="noopener">GitHub repository</a>.
+        </p>
+      </section>
+    </article>
+  </main>
+</BaseLayout>
+
+<style>
+  .docs-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--space-lg);
+  }
+
+  .docs-content h1 {
+    font-size: var(--font-size-4xl);
+    margin-bottom: var(--space-xl);
+  }
+
+  .docs-content section {
+    margin-bottom: var(--space-xl);
+  }
+
+  .docs-content h2 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--space-md);
+  }
+
+  .docs-content p {
+    line-height: var(--line-height-relaxed);
+    margin-bottom: var(--space-md);
+  }
+
+  .docs-content ul {
+    margin-bottom: var(--space-md);
+    padding-left: var(--space-xl);
+  }
+
+  .docs-content li {
+    margin-bottom: var(--space-xs);
+    line-height: var(--line-height-relaxed);
+  }
+</style>

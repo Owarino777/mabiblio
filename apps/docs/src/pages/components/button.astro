@@ -1,0 +1,704 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CodePreview from '../../components/CodePreview.astro';
+---
+
+<BaseLayout title="Button - Accessible UI Kit">
+  <main id="main-content" class="component-page">
+    <div class="component-layout">
+      <aside class="component-toc">
+        <nav aria-label="Page contents">
+          <h2>On this page</h2>
+          <ul role="list">
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#variants">Variants</a></li>
+            <li><a href="#sizes">Sizes</a></li>
+            <li><a href="#states">States</a></li>
+            <li><a href="#icon-buttons">Icon Buttons</a></li>
+            <li><a href="#css-classes">CSS Classes</a></li>
+            <li><a href="#dos-and-donts">Do's and Don'ts</a></li>
+            <li><a href="#accessibility">Accessibility</a></li>
+            <li><a href="#rgesn">Eco-Design (RGESN)</a></li>
+            <li><a href="#tests">Tests</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <article class="component-content">
+        <header>
+          <h1>Button</h1>
+          <p class="lead">
+            Buttons trigger actions. They communicate what will happen when the user interacts with them.
+          </p>
+        </header>
+
+        <!-- Overview -->
+        <section id="overview" aria-labelledby="overview-heading">
+          <h2 id="overview-heading">Overview</h2>
+          <p>
+            The Button component provides three variants for different levels of emphasis:
+            <strong>primary</strong> for main actions, <strong>secondary</strong> for
+            supporting actions, and <strong>tertiary</strong> (ghost) for low-emphasis actions.
+          </p>
+          <p>
+            All buttons are fully keyboard accessible with visible focus indicators and
+            support loading states for asynchronous operations.
+          </p>
+        </section>
+
+        <!-- Variants -->
+        <section id="variants" aria-labelledby="variants-heading">
+          <h2 id="variants-heading">Variants</h2>
+
+          <h3>Primary</h3>
+          <p>Use for the main action on a page or in a form. Limit to one per section.</p>
+          <CodePreview 
+            title="Primary Button" 
+            code={`<button type="button" class="auk-btn auk-btn--primary auk-btn--md">
+  Save Changes
+</button>`}
+          >
+            <button type="button" class="auk-btn auk-btn--primary auk-btn--md">
+              Save Changes
+            </button>
+          </CodePreview>
+
+          <h3>Secondary</h3>
+          <p>Use for supporting actions that are important but not primary.</p>
+          <CodePreview 
+            title="Secondary Button" 
+            code={`<button type="button" class="auk-btn auk-btn--secondary auk-btn--md">
+  Cancel
+</button>`}
+          >
+            <button type="button" class="auk-btn auk-btn--secondary auk-btn--md">
+              Cancel
+            </button>
+          </CodePreview>
+
+          <h3>Tertiary (Ghost)</h3>
+          <p>Use for low-emphasis actions, often paired with primary or secondary buttons.</p>
+          <CodePreview 
+            title="Tertiary Button" 
+            code={`<button type="button" class="auk-btn auk-btn--tertiary auk-btn--md">
+  Learn More
+</button>`}
+          >
+            <button type="button" class="auk-btn auk-btn--tertiary auk-btn--md">
+              Learn More
+            </button>
+          </CodePreview>
+
+          <h3>All Variants</h3>
+          <p>Side by side comparison of all three variants.</p>
+          <CodePreview 
+            title="All Variants" 
+            code={`<!-- Primary -->
+<button type="button" class="auk-btn auk-btn--primary auk-btn--md">
+  Primary
+</button>
+
+<!-- Secondary -->
+<button type="button" class="auk-btn auk-btn--secondary auk-btn--md">
+  Secondary
+</button>
+
+<!-- Tertiary -->
+<button type="button" class="auk-btn auk-btn--tertiary auk-btn--md">
+  Tertiary
+</button>`}
+          >
+            <button type="button" class="auk-btn auk-btn--primary auk-btn--md">Primary</button>
+            <button type="button" class="auk-btn auk-btn--secondary auk-btn--md">Secondary</button>
+            <button type="button" class="auk-btn auk-btn--tertiary auk-btn--md">Tertiary</button>
+          </CodePreview>
+        </section>
+
+        <!-- Sizes -->
+        <section id="sizes" aria-labelledby="sizes-heading">
+          <h2 id="sizes-heading">Sizes</h2>
+          <p>Three sizes are available: small, medium (default), and large.</p>
+          
+          <CodePreview 
+            title="Small" 
+            code={`<button type="button" class="auk-btn auk-btn--primary auk-btn--sm">
+  Small Button
+</button>`}
+          >
+            <button type="button" class="auk-btn auk-btn--primary auk-btn--sm">
+              Small Button
+            </button>
+          </CodePreview>
+
+          <CodePreview 
+            title="Medium (Default)" 
+            code={`<button type="button" class="auk-btn auk-btn--primary auk-btn--md">
+  Medium Button
+</button>`}
+          >
+            <button type="button" class="auk-btn auk-btn--primary auk-btn--md">
+              Medium Button
+            </button>
+          </CodePreview>
+
+          <CodePreview 
+            title="Large" 
+            code={`<button type="button" class="auk-btn auk-btn--primary auk-btn--lg">
+  Large Button
+</button>`}
+          >
+            <button type="button" class="auk-btn auk-btn--primary auk-btn--lg">
+              Large Button
+            </button>
+          </CodePreview>
+
+          <h3>All Sizes Comparison</h3>
+          <CodePreview 
+            title="Size Comparison" 
+            code={`<button type="button" class="auk-btn auk-btn--primary auk-btn--sm">Small</button>
+<button type="button" class="auk-btn auk-btn--primary auk-btn--md">Medium</button>
+<button type="button" class="auk-btn auk-btn--primary auk-btn--lg">Large</button>`}
+          >
+            <button type="button" class="auk-btn auk-btn--primary auk-btn--sm">Small</button>
+            <button type="button" class="auk-btn auk-btn--primary auk-btn--md">Medium</button>
+            <button type="button" class="auk-btn auk-btn--primary auk-btn--lg">Large</button>
+          </CodePreview>
+        </section>
+
+        <!-- States -->
+        <section id="states" aria-labelledby="states-heading">
+          <h2 id="states-heading">States</h2>
+
+          <h3>Disabled</h3>
+          <p>
+            Use for actions that are not currently available. The button cannot be focused or clicked.
+          </p>
+          <CodePreview 
+            title="Disabled Buttons" 
+            code={`<!-- Disabled Primary -->
+<button type="button" class="auk-btn auk-btn--primary auk-btn--md" disabled aria-disabled="true">
+  Disabled Primary
+</button>
+
+<!-- Disabled Secondary -->
+<button type="button" class="auk-btn auk-btn--secondary auk-btn--md" disabled aria-disabled="true">
+  Disabled Secondary
+</button>`}
+          >
+            <button type="button" class="auk-btn auk-btn--primary auk-btn--md" disabled aria-disabled="true">
+              Disabled Primary
+            </button>
+            <button type="button" class="auk-btn auk-btn--secondary auk-btn--md" disabled aria-disabled="true">
+              Disabled Secondary
+            </button>
+          </CodePreview>
+
+          <h3>Loading</h3>
+          <p>
+            Use when an action is in progress. The button shows a spinner and is not interactive.
+          </p>
+          <CodePreview 
+            title="Loading Button" 
+            code={`<button type="button" class="auk-btn auk-btn--primary auk-btn--md auk-btn--loading" aria-busy="true">
+  <span class="auk-btn__spinner" aria-hidden="true"></span>
+  <span class="auk-btn__text">Saving...</span>
+</button>`}
+          >
+            <button type="button" class="auk-btn auk-btn--primary auk-btn--md auk-btn--loading" aria-busy="true">
+              <span class="auk-btn__spinner" aria-hidden="true"></span>
+              <span class="auk-btn__text">Saving...</span>
+            </button>
+          </CodePreview>
+        </section>
+
+        <!-- Icon Buttons -->
+        <section id="icon-buttons" aria-labelledby="icon-buttons-heading">
+          <h2 id="icon-buttons-heading">Icon Buttons</h2>
+          
+          <h3>Icon Only</h3>
+          <p>
+            Icon-only buttons must have an <code>aria-label</code> for screen reader users.
+          </p>
+          <CodePreview 
+            title="Icon-Only Buttons" 
+            code={`<!-- Close button -->
+<button type="button" 
+  class="auk-btn auk-btn--primary auk-btn--md auk-btn--icon-only" 
+  aria-label="Close">
+  <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+    <path d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"/>
+  </svg>
+</button>
+
+<!-- Settings button -->
+<button type="button" 
+  class="auk-btn auk-btn--secondary auk-btn--md auk-btn--icon-only" 
+  aria-label="Settings">
+  <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+    <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0..." clip-rule="evenodd"/>
+  </svg>
+</button>`}
+          >
+            <button type="button" class="auk-btn auk-btn--primary auk-btn--md auk-btn--icon-only" aria-label="Close">
+              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"/>
+              </svg>
+            </button>
+            <button type="button" class="auk-btn auk-btn--secondary auk-btn--md auk-btn--icon-only" aria-label="Settings">
+              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
+              </svg>
+            </button>
+          </CodePreview>
+
+          <h3>With Text and Icon</h3>
+          <p>Icons can be combined with text for enhanced clarity.</p>
+          <CodePreview 
+            title="Button with Icon" 
+            code={`<button type="button" class="auk-btn auk-btn--primary auk-btn--md">
+  <svg aria-hidden="true" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+    <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd"/>
+  </svg>
+  Add Item
+</button>`}
+          >
+            <button type="button" class="auk-btn auk-btn--primary auk-btn--md">
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd"/>
+              </svg>
+              Add Item
+            </button>
+          </CodePreview>
+        </section>
+
+        <!-- CSS Classes Reference -->
+        <section id="css-classes" aria-labelledby="css-classes-heading">
+          <h2 id="css-classes-heading">CSS Classes</h2>
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Class</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>.auk-btn</code></td>
+                  <td>Base button class (required)</td>
+                </tr>
+                <tr>
+                  <td><code>.auk-btn--primary</code></td>
+                  <td>Primary variant (filled)</td>
+                </tr>
+                <tr>
+                  <td><code>.auk-btn--secondary</code></td>
+                  <td>Secondary variant (outlined)</td>
+                </tr>
+                <tr>
+                  <td><code>.auk-btn--tertiary</code></td>
+                  <td>Tertiary variant (ghost)</td>
+                </tr>
+                <tr>
+                  <td><code>.auk-btn--sm</code></td>
+                  <td>Small size</td>
+                </tr>
+                <tr>
+                  <td><code>.auk-btn--md</code></td>
+                  <td>Medium size (default)</td>
+                </tr>
+                <tr>
+                  <td><code>.auk-btn--lg</code></td>
+                  <td>Large size</td>
+                </tr>
+                <tr>
+                  <td><code>.auk-btn--icon-only</code></td>
+                  <td>Icon-only button (square)</td>
+                </tr>
+                <tr>
+                  <td><code>.auk-btn--loading</code></td>
+                  <td>Loading state</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Full CSS Source</h3>
+          <p>
+            <a href="https://github.com/your-org/accessible-ui-kit/blob/main/packages/ui/src/button/button.css" target="_blank" rel="noopener">
+              View button.css on GitHub →
+            </a>
+          </p>
+        </section>
+
+        <!-- Do's and Don'ts -->
+        <section id="dos-and-donts" aria-labelledby="dos-donts-heading">
+          <h2 id="dos-donts-heading">Do's and Don'ts</h2>
+
+          <div class="dos-donts-grid">
+            <div class="do">
+              <h3>✓ Do</h3>
+              <ul>
+                <li>Use clear, action-oriented labels ("Save", "Delete", "Submit")</li>
+                <li>Use the <code>&lt;button&gt;</code> element for buttons</li>
+                <li>Provide <code>aria-label</code> for icon-only buttons</li>
+                <li>Use <code>type="button"</code> for non-submit buttons</li>
+                <li>Use one primary button per section</li>
+                <li>Consider button order (primary action last in a row)</li>
+              </ul>
+            </div>
+            <div class="dont">
+              <h3>✗ Don't</h3>
+              <ul>
+                <li>Don't use vague labels ("Click here", "OK")</li>
+                <li>Don't use <code>&lt;div&gt;</code> or <code>&lt;a&gt;</code> for button actions</li>
+                <li>Don't disable focus on disabled buttons</li>
+                <li>Don't rely on color alone to convey meaning</li>
+                <li>Don't use multiple primary buttons in the same area</li>
+                <li>Don't hide the loading state from screen readers</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Accessibility -->
+        <section id="accessibility" aria-labelledby="a11y-heading">
+          <h2 id="a11y-heading">Accessibility</h2>
+
+          <h3>Keyboard Interactions</h3>
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Key</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><kbd>Tab</kbd></td>
+                  <td>Move focus to the button</td>
+                </tr>
+                <tr>
+                  <td><kbd>Enter</kbd></td>
+                  <td>Activate the button</td>
+                </tr>
+                <tr>
+                  <td><kbd>Space</kbd></td>
+                  <td>Activate the button</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>ARIA Attributes</h3>
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Attribute</th>
+                  <th>When to use</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>aria-label</code></td>
+                  <td>Required for icon-only buttons to provide accessible name</td>
+                </tr>
+                <tr>
+                  <td><code>aria-disabled="true"</code></td>
+                  <td>Use alongside <code>disabled</code> attribute</td>
+                </tr>
+                <tr>
+                  <td><code>aria-busy="true"</code></td>
+                  <td>When button is in loading state</td>
+                </tr>
+                <tr>
+                  <td><code>aria-pressed</code></td>
+                  <td>For toggle buttons (not covered here)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Checklist</h3>
+          <ul class="checklist">
+            <li>✓ Uses native <code>&lt;button&gt;</code> element</li>
+            <li>✓ Has visible focus indicator</li>
+            <li>✓ Color contrast meets WCAG AA (4.5:1 for text)</li>
+            <li>✓ Clickable area is at least 44×44px</li>
+            <li>✓ Icon buttons have <code>aria-label</code></li>
+            <li>✓ Disabled state is announced to screen readers</li>
+            <li>✓ Loading state uses <code>aria-busy</code></li>
+            <li>✓ Animations respect <code>prefers-reduced-motion</code></li>
+          </ul>
+        </section>
+
+        <!-- RGESN / Eco-Design -->
+        <section id="rgesn" aria-labelledby="rgesn-heading">
+          <h2 id="rgesn-heading">Eco-Design (RGESN)</h2>
+
+          <h3>Bundle Size</h3>
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>File</th>
+                  <th>Size (minified)</th>
+                  <th>Size (gzip)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>button.css</td>
+                  <td>~2.5 KB</td>
+                  <td>~800 B</td>
+                </tr>
+                <tr>
+                  <td>JavaScript</td>
+                  <td>0 KB</td>
+                  <td>0 B</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Eco-Design Notes</h3>
+          <ul>
+            <li>✓ No JavaScript required for basic functionality</li>
+            <li>✓ Uses CSS custom properties (no runtime overhead)</li>
+            <li>✓ Animations are CSS-only and respect reduced motion</li>
+            <li>✓ No external dependencies</li>
+            <li>✓ System font stack (no font loading)</li>
+          </ul>
+
+          <h3>Alternatives</h3>
+          <p>
+            For even lighter implementations, consider using native <code>&lt;button&gt;</code>
+            with minimal custom styling. The browser's default button is fully accessible.
+          </p>
+        </section>
+
+        <!-- Tests -->
+        <section id="tests" aria-labelledby="tests-heading">
+          <h2 id="tests-heading">Tests</h2>
+
+          <h3>Test Coverage</h3>
+          <ul>
+            <li>Unit: <code>getButtonClasses()</code> function</li>
+            <li>E2E: Keyboard activation (Enter, Space)</li>
+            <li>E2E: Focus visibility</li>
+            <li>A11y: axe-core scan (no violations)</li>
+          </ul>
+
+          <h3>Run Tests</h3>
+          <CodePreview
+            title="Test Commands"
+            language="bash"
+            code={`# Unit tests
+pnpm test --filter @accessible-ui-kit/ui
+
+# E2E tests  
+pnpm test:e2e --grep button
+
+# Accessibility tests
+pnpm test:a11y --grep button`}
+          >
+            <div class="test-commands-preview">
+              <code>pnpm test</code> - Run unit tests<br />
+              <code>pnpm test:e2e</code> - Run E2E tests<br />
+              <code>pnpm test:a11y</code> - Run accessibility tests
+            </div>
+          </CodePreview>
+        </section>
+      </article>
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+  /* Import button styles */
+  @import '/styles/components/button.css';
+
+  .component-page {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .component-layout {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    gap: var(--space-xl);
+    padding: var(--space-lg);
+  }
+
+  @media (max-width: 1100px) {
+    .component-layout {
+      grid-template-columns: 1fr;
+    }
+
+    .component-toc {
+      display: none;
+    }
+  }
+
+  .component-toc {
+    order: 1;
+    position: sticky;
+    top: calc(60px + var(--space-lg));
+    align-self: start;
+  }
+
+  .component-toc h2 {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-sm);
+  }
+
+  .component-toc ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .component-toc a {
+    display: block;
+    padding: var(--space-xs) 0;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    font-size: var(--font-size-sm);
+  }
+
+  .component-toc a:hover {
+    color: var(--color-text-primary);
+  }
+
+  .component-content {
+    min-width: 0;
+  }
+
+  .component-content header {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .component-content h1 {
+    font-size: var(--font-size-4xl);
+    margin-bottom: var(--space-md);
+  }
+
+  .lead {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+    max-width: 600px;
+  }
+
+  .component-content section {
+    margin-bottom: var(--space-2xl);
+    scroll-margin-top: calc(60px + var(--space-lg));
+  }
+
+  .component-content h2 {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--space-md);
+    padding-bottom: var(--space-sm);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .component-content h3 {
+    font-size: var(--font-size-lg);
+    margin-top: var(--space-lg);
+    margin-bottom: var(--space-sm);
+  }
+
+  .table-wrapper {
+    overflow-x: auto;
+    margin: var(--space-md) 0;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    text-align: left;
+    padding: var(--space-sm) var(--space-md);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  th {
+    background: var(--color-surface);
+    font-weight: var(--font-weight-semibold);
+  }
+
+  kbd {
+    display: inline-block;
+    padding: 0.125em 0.5em;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-family-mono);
+    font-size: 0.9em;
+  }
+
+  .dos-donts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-lg);
+    margin: var(--space-md) 0;
+  }
+
+  .do, .dont {
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+  }
+
+  .do {
+    background: var(--color-success-light);
+  }
+
+  .dont {
+    background: var(--color-error-light);
+  }
+
+  .do h3, .dont h3 {
+    margin-top: 0;
+    margin-bottom: var(--space-sm);
+  }
+
+  .do ul, .dont ul {
+    margin: 0;
+    padding-left: var(--space-lg);
+  }
+
+  .do li, .dont li {
+    margin-bottom: var(--space-xs);
+  }
+
+  .checklist {
+    list-style: none;
+    padding: 0;
+  }
+
+  .checklist li {
+    padding: var(--space-xs) 0;
+    padding-left: var(--space-lg);
+  }
+
+  .test-commands-preview {
+    font-family: var(--font-family-mono);
+    font-size: var(--font-size-sm);
+    line-height: 1.8;
+  }
+
+  .test-commands-preview code {
+    background: var(--color-surface-hover);
+    padding: 0.125em 0.375em;
+    border-radius: var(--radius-sm);
+  }
+</style>
+
+<link rel="stylesheet" href="/styles/components/button.css" />

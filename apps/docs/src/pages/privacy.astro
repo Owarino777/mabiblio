@@ -1,0 +1,124 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Privacy Policy - Accessible UI Kit">
+  <main id="main-content" class="docs-page">
+    <article class="docs-content">
+      <h1>Privacy Policy</h1>
+      <p class="lead">
+        We respect your privacy. This site collects no personal data.
+      </p>
+
+      <section>
+        <h2>Data Collection</h2>
+        <p>
+          <strong>We do not collect any personal data.</strong>
+        </p>
+        <p>
+          This website:
+        </p>
+        <ul>
+          <li>Does not use cookies (except for essential theme preference)</li>
+          <li>Does not use analytics or tracking scripts</li>
+          <li>Does not collect IP addresses or user data</li>
+          <li>Does not share any data with third parties</li>
+          <li>Does not require user accounts or registration</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Theme Preference</h2>
+        <p>
+          We store your light/dark theme preference in your browser's localStorage.
+          This data:
+        </p>
+        <ul>
+          <li>Never leaves your device</li>
+          <li>Is not sent to any server</li>
+          <li>Can be cleared by clearing your browser data</li>
+          <li>Contains only the string "light" or "dark"</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Third-Party Resources</h2>
+        <p>
+          This site does not load any resources from third-party servers.
+          All assets (CSS, JavaScript, fonts) are self-hosted.
+        </p>
+      </section>
+
+      <section>
+        <h2>External Links</h2>
+        <p>
+          This site may contain links to external websites. We are not responsible
+          for the privacy practices of other sites. External links are marked with
+          appropriate indicators.
+        </p>
+      </section>
+
+      <section>
+        <h2>Contact</h2>
+        <p>
+          If you have questions about this privacy policy, please open an issue
+          on our <a href="https://github.com/your-org/accessible-ui-kit" target="_blank" rel="noopener">GitHub repository</a>.
+        </p>
+      </section>
+
+      <section>
+        <h2>Changes</h2>
+        <p>
+          This policy may be updated. Changes will be reflected in the
+          <a href="https://github.com/your-org/accessible-ui-kit/blob/main/CHANGELOG.md" target="_blank" rel="noopener">CHANGELOG</a>.
+        </p>
+        <p>
+          <em>Last updated: January 18, 2026</em>
+        </p>
+      </section>
+    </article>
+  </main>
+</BaseLayout>
+
+<style>
+  .docs-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--space-lg);
+  }
+
+  .docs-content h1 {
+    font-size: var(--font-size-4xl);
+    margin-bottom: var(--space-md);
+  }
+
+  .lead {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-2xl);
+  }
+
+  .docs-content section {
+    margin-bottom: var(--space-xl);
+  }
+
+  .docs-content h2 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--space-md);
+  }
+
+  .docs-content p {
+    line-height: var(--line-height-relaxed);
+    margin-bottom: var(--space-md);
+  }
+
+  .docs-content ul {
+    margin-bottom: var(--space-md);
+    padding-left: var(--space-xl);
+  }
+
+  .docs-content li {
+    margin-bottom: var(--space-xs);
+    line-height: var(--line-height-relaxed);
+  }
+</style>

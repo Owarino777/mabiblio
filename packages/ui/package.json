@@ -1,0 +1,25 @@
+{
+  "name": "@accessible-ui-kit/ui",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./button": "./src/button/index.ts",
+    "./button/styles": "./src/button/button.css"
+  },
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "build": "echo 'UI package - source files only'",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "vitest": "^1.1.0"
+  }
+}

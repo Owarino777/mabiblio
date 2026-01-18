@@ -1,0 +1,67 @@
+{
+  "name": "accessible-ui-kit",
+  "version": "0.0.0",
+  "private": true,
+  "description": "A Material Design-inspired component catalog with excellence in accessibility (RGAA/WCAG), eco-design (RGESN), and GDPR compliance",
+  "keywords": [
+    "accessibility",
+    "a11y",
+    "wcag",
+    "rgaa",
+    "rgesn",
+    "eco-design",
+    "ui-kit",
+    "components",
+    "design-system"
+  ],
+  "license": "MIT",
+  "author": "",
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm --filter @accessible-ui-kit/docs dev",
+    "build": "pnpm --filter @accessible-ui-kit/docs build",
+    "preview": "pnpm --filter @accessible-ui-kit/docs preview",
+    "lint": "eslint . --ext .ts,.tsx,.astro,.js,.mjs",
+    "lint:fix": "eslint . --ext .ts,.tsx,.astro,.js,.mjs --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "test:a11y": "playwright test --grep @a11y",
+    "typecheck": "tsc --noEmit",
+    "clean": "rimraf **/node_modules **/dist **/.astro",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.8.2",
+    "@playwright/test": "^1.40.1",
+    "@types/node": "^20.10.5",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-astro": "^0.31.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.1.1",
+    "prettier-plugin-astro": "^0.12.3",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.3.3",
+    "vitest": "^1.1.0"
+  },
+  "packageManager": "pnpm@8.14.0",
+  "engines": {
+    "node": ">=18.17.0",
+    "pnpm": ">=8.0.0"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,mjs,astro}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,css}": [
+      "prettier --write"
+    ]
+  }
+}

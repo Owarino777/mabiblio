@@ -1,0 +1,276 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Eco-Design (RGESN) - Accessible UI Kit">
+  <main id="main-content" class="docs-page">
+    <article class="docs-content">
+      <h1>Eco-Design</h1>
+      <p class="lead">
+        Building sustainable web experiences with minimal environmental impact.
+      </p>
+
+      <section id="why" aria-labelledby="why-heading">
+        <h2 id="why-heading">Why Eco-Design Matters</h2>
+        <p>
+          The internet accounts for approximately 4% of global CO2 emissions — more than the aviation industry.
+          Every kilobyte transferred, every computation performed, and every server request has an environmental cost.
+        </p>
+        <p>
+          By building lighter, more efficient websites, we can:
+        </p>
+        <ul>
+          <li>Reduce energy consumption and carbon emissions</li>
+          <li>Improve performance for all users</li>
+          <li>Lower hosting and bandwidth costs</li>
+          <li>Extend device battery life</li>
+          <li>Make content accessible on slow connections</li>
+        </ul>
+      </section>
+
+      <section id="rgesn" aria-labelledby="rgesn-heading">
+        <h2 id="rgesn-heading">RGESN Compliance</h2>
+        <p>
+          We follow the <strong>Référentiel Général d'Écoconception de Services Numériques</strong> (RGESN),
+          the French reference framework for eco-design of digital services.
+        </p>
+        <p>
+          Key principles we apply:
+        </p>
+        <ul>
+          <li><strong>Frugality:</strong> Only include what's necessary</li>
+          <li><strong>Performance:</strong> Optimize every resource</li>
+          <li><strong>Durability:</strong> Support older devices and browsers</li>
+          <li><strong>Transparency:</strong> Document environmental impact</li>
+        </ul>
+      </section>
+
+      <section id="our-approach" aria-labelledby="approach-heading">
+        <h2 id="approach-heading">Our Approach</h2>
+
+        <h3>Zero JavaScript by Default</h3>
+        <p>
+          Most components require no JavaScript at all. When JS is needed (e.g., for dialogs),
+          it's minimal and progressively enhanced.
+        </p>
+        <div class="stats-box">
+          <div class="stat">
+            <span class="stat-value">0 KB</span>
+            <span class="stat-label">JS for Button component</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">&lt; 3 KB</span>
+            <span class="stat-label">CSS per component (gzipped)</span>
+          </div>
+        </div>
+
+        <h3>System Fonts</h3>
+        <p>
+          We use the system font stack, saving 50-200 KB per page load.
+          Users see familiar fonts that render instantly.
+        </p>
+        <pre><code>font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;</code></pre>
+
+        <h3>CSS Custom Properties</h3>
+        <p>
+          All theming uses CSS variables — no runtime JavaScript, no CSS-in-JS overhead.
+        </p>
+
+        <h3>No External Dependencies</h3>
+        <p>
+          Zero third-party libraries for components. No npm packages to download,
+          no supply chain to audit.
+        </p>
+
+        <h3>No Tracking</h3>
+        <p>
+          No analytics, no trackers, no third-party requests by default.
+          Every external request has an environmental (and privacy) cost.
+        </p>
+
+        <h3>Static Generation</h3>
+        <p>
+          This site is statically generated — no server-side rendering, no database queries,
+          no server computation on each request.
+        </p>
+      </section>
+
+      <section id="measurements" aria-labelledby="measurements-heading">
+        <h2 id="measurements-heading">Measuring Impact</h2>
+
+        <h3>Performance Budgets</h3>
+        <p>We maintain strict performance budgets:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Metric</th>
+              <th>Target</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Total page weight</td>
+              <td>&lt; 100 KB</td>
+            </tr>
+            <tr>
+              <td>JavaScript</td>
+              <td>&lt; 50 KB (gzipped)</td>
+            </tr>
+            <tr>
+              <td>CSS</td>
+              <td>&lt; 30 KB (gzipped)</td>
+            </tr>
+            <tr>
+              <td>HTTP requests</td>
+              <td>&lt; 10 per page</td>
+            </tr>
+            <tr>
+              <td>Time to Interactive</td>
+              <td>&lt; 2 seconds</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Carbon Footprint</h3>
+        <p>
+          You can estimate a page's carbon footprint using tools like
+          <a href="https://www.websitecarbon.com/" target="_blank" rel="noopener">Website Carbon Calculator</a>.
+        </p>
+      </section>
+
+      <section id="guidelines" aria-labelledby="guidelines-heading">
+        <h2 id="guidelines-heading">Component Guidelines</h2>
+        <p>
+          Each component's documentation includes:
+        </p>
+        <ul>
+          <li>Bundle size (minified and gzipped)</li>
+          <li>JavaScript requirement (if any)</li>
+          <li>Lighter alternatives when available</li>
+          <li>Performance considerations</li>
+        </ul>
+      </section>
+
+      <section id="resources" aria-labelledby="resources-heading">
+        <h2 id="resources-heading">Resources</h2>
+        <ul>
+          <li><a href="https://ecoresponsable.numerique.gouv.fr/publications/referentiel-general-ecoconception/" target="_blank" rel="noopener">RGESN (French)</a></li>
+          <li><a href="https://www.thegreenwebfoundation.org/" target="_blank" rel="noopener">The Green Web Foundation</a></li>
+          <li><a href="https://www.websitecarbon.com/" target="_blank" rel="noopener">Website Carbon Calculator</a></li>
+          <li><a href="https://sustainablewebdesign.org/" target="_blank" rel="noopener">Sustainable Web Design</a></li>
+          <li><a href="https://www.w3.org/community/sustyweb/" target="_blank" rel="noopener">W3C Sustainable Web Design Community Group</a></li>
+        </ul>
+      </section>
+    </article>
+  </main>
+</BaseLayout>
+
+<style>
+  .docs-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--space-lg);
+  }
+
+  .docs-content h1 {
+    font-size: var(--font-size-4xl);
+    margin-bottom: var(--space-md);
+  }
+
+  .lead {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-2xl);
+  }
+
+  .docs-content section {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .docs-content h2 {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--space-md);
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .docs-content section:first-of-type h2 {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .docs-content h3 {
+    font-size: var(--font-size-lg);
+    margin-top: var(--space-lg);
+    margin-bottom: var(--space-sm);
+  }
+
+  .docs-content p {
+    line-height: var(--line-height-relaxed);
+    margin-bottom: var(--space-md);
+  }
+
+  .docs-content ul {
+    margin-bottom: var(--space-md);
+    padding-left: var(--space-xl);
+  }
+
+  .docs-content li {
+    margin-bottom: var(--space-xs);
+    line-height: var(--line-height-relaxed);
+  }
+
+  .stats-box {
+    display: flex;
+    gap: var(--space-xl);
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border-radius: var(--radius-md);
+    margin: var(--space-md) 0;
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stat-value {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-success);
+  }
+
+  .stat-label {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+  }
+
+  pre {
+    margin: var(--space-md) 0;
+    padding: var(--space-md);
+    background: var(--color-code-bg);
+    border-radius: var(--radius-md);
+    overflow-x: auto;
+  }
+
+  code {
+    font-size: var(--font-size-sm);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--space-md) 0;
+  }
+
+  th, td {
+    text-align: left;
+    padding: var(--space-sm) var(--space-md);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  th {
+    background: var(--color-surface);
+    font-weight: var(--font-weight-semibold);
+  }
+</style>

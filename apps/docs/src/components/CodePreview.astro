@@ -1,0 +1,181 @@
+---
+export interface Props {
+  title?: string;
+  code: string;
+  language?: string;
+}
+
+const { title, code, language = 'html' } = Astro.props;
+const uniqueId = `code-${Math.random().toString(36).substring(2, 9)}`;
+
+// Escape HTML entities for safe display
+function escapeHtml(text: string): string {
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
+---
+
+<div class="code-preview">
+  <div class="code-preview__demo">
+    {title && <span class="code-preview__label">{title}</span>}
+    <div class="code-preview__content">
+      <slot />
+    </div>
+  </div>
+  <div class="code-preview__code">
+    <div class="code-preview__header">
+      <span class="code-preview__lang">{language.toUpperCase()}</span>
+      <button
+        type="button"
+        class="code-preview__copy"
+        aria-label="Copier le code"
+        data-copy-btn={uniqueId}
+      >
+        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+        </svg>
+        <span class="code-preview__copy-text">Copier</span>
+      </button>
+    </div>
+    <pre class="code-preview__pre"><code id={uniqueId} class={`language-${language}`} set:html={escapeHtml(code)} /></pre>
+  </div>
+</div>
+
+<script>
+  // Copy to clipboard functionality
+  document.querySelectorAll('[data-copy-btn]').forEach((btn) => {
+    btn.addEventListener('click', async () => {
+      const codeId = btn.getAttribute('data-copy-btn');
+      const codeEl = document.getElementById(codeId);
+      if (codeEl) {
+        try {
+          await navigator.clipboard.writeText(codeEl.textContent || '');
+          const textEl = btn.querySelector('.code-preview__copy-text');
+          if (textEl) {
+            const original = textEl.textContent;
+            textEl.textContent = 'Copié !';
+            setTimeout(() => {
+              textEl.textContent = original;
+            }, 2000);
+          }
+        } catch (err) {
+          console.error('Failed to copy:', err);
+        }
+      }
+    });
+  });
+</script>
+
+<style>
+  .code-preview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    margin: var(--space-lg) 0;
+  }
+
+  @media (max-width: 900px) {
+    .code-preview {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .code-preview__demo {
+    padding: var(--space-xl);
+    background: var(--color-surface);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    border-right: 1px solid var(--color-border);
+  }
+
+  @media (max-width: 900px) {
+    .code-preview__demo {
+      border-right: none;
+      border-bottom: 1px solid var(--color-border);
+    }
+  }
+
+  .code-preview__label {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .code-preview__content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-md);
+  }
+
+  .code-preview__code {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-code-bg);
+    min-width: 0;
+  }
+
+  .code-preview__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-sm) var(--space-md);
+    border-bottom: 1px solid var(--color-border);
+    background: var(--color-surface);
+  }
+
+  .code-preview__lang {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-secondary);
+  }
+
+  .code-preview__copy {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    padding: var(--space-xs) var(--space-sm);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    background: transparent;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+  }
+
+  .code-preview__copy:hover {
+    background: var(--color-surface-hover);
+    color: var(--color-text-primary);
+  }
+
+  .code-preview__copy:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+  }
+
+  .code-preview__pre {
+    margin: 0;
+    padding: var(--space-md);
+    overflow-x: auto;
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-relaxed);
+  }
+
+  .code-preview__pre code {
+    background: transparent;
+    padding: 0;
+    white-space: pre;
+  }
+</style>

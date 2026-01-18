@@ -1,0 +1,269 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Components - Accessible UI Kit">
+  <main id="main-content" class="components-page">
+    <div class="components-layout">
+      <aside class="components-sidebar">
+        <nav aria-label="Component categories">
+          <h2>Components</h2>
+
+          <section>
+            <h3>Forms</h3>
+            <ul role="list">
+              <li><a href="/components/button">Button</a></li>
+              <li><a href="/components/text-field" class="coming-soon">TextField</a></li>
+              <li><a href="/components/checkbox" class="coming-soon">Checkbox</a></li>
+              <li><a href="/components/radio" class="coming-soon">Radio</a></li>
+              <li><a href="/components/switch" class="coming-soon">Switch</a></li>
+              <li><a href="/components/select" class="coming-soon">Select</a></li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Feedback</h3>
+            <ul role="list">
+              <li><a href="/components/alert" class="coming-soon">Alert</a></li>
+              <li><a href="/components/toast" class="coming-soon">Toast</a></li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Navigation</h3>
+            <ul role="list">
+              <li><a href="/components/tabs" class="coming-soon">Tabs</a></li>
+              <li><a href="/components/breadcrumb" class="coming-soon">Breadcrumb</a></li>
+              <li><a href="/components/pagination" class="coming-soon">Pagination</a></li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Overlays</h3>
+            <ul role="list">
+              <li><a href="/components/dialog" class="coming-soon">Dialog</a></li>
+              <li><a href="/components/tooltip" class="coming-soon">Tooltip</a></li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Data Display</h3>
+            <ul role="list">
+              <li><a href="/components/card" class="coming-soon">Card</a></li>
+            </ul>
+          </section>
+        </nav>
+      </aside>
+
+      <div class="components-content">
+        <h1>Component Library</h1>
+        <p class="lead">
+          Accessible, eco-friendly UI components ready to copy and paste.
+          Each component is built with web standards, minimal JavaScript, and full keyboard support.
+        </p>
+
+        <section class="component-grid" aria-labelledby="forms-heading">
+          <h2 id="forms-heading">Forms</h2>
+          <div class="cards">
+            <a href="/components/button" class="component-card">
+              <h3>Button</h3>
+              <p>Primary, secondary, and tertiary button variants with loading states.</p>
+              <span class="status status--ready">Ready</span>
+            </a>
+            <div class="component-card component-card--coming">
+              <h3>TextField</h3>
+              <p>Text input with labels, validation, and error messages.</p>
+              <span class="status status--coming">Coming Soon</span>
+            </div>
+            <div class="component-card component-card--coming">
+              <h3>Checkbox</h3>
+              <p>Accessible checkbox with indeterminate state support.</p>
+              <span class="status status--coming">Coming Soon</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="component-grid" aria-labelledby="feedback-heading">
+          <h2 id="feedback-heading">Feedback</h2>
+          <div class="cards">
+            <div class="component-card component-card--coming">
+              <h3>Alert</h3>
+              <p>Inline alerts for important messages and notifications.</p>
+              <span class="status status--coming">Coming Soon</span>
+            </div>
+            <div class="component-card component-card--coming">
+              <h3>Toast</h3>
+              <p>Non-blocking notifications with screen reader support.</p>
+              <span class="status status--coming">Coming Soon</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="component-grid" aria-labelledby="overlays-heading">
+          <h2 id="overlays-heading">Overlays</h2>
+          <div class="cards">
+            <div class="component-card component-card--coming">
+              <h3>Dialog</h3>
+              <p>Modal dialogs with focus trap and proper ARIA.</p>
+              <span class="status status--coming">Coming Soon</span>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+  .components-page {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .components-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: var(--space-xl);
+    padding: var(--space-lg);
+  }
+
+  @media (max-width: 900px) {
+    .components-layout {
+      grid-template-columns: 1fr;
+    }
+
+    .components-sidebar {
+      display: none; /* TODO: Mobile menu */
+    }
+  }
+
+  .components-sidebar {
+    position: sticky;
+    top: calc(60px + var(--space-lg)); /* Header height + padding */
+    align-self: start;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+  }
+
+  .components-sidebar h2 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-lg);
+  }
+
+  .components-sidebar h3 {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: var(--space-lg);
+    margin-bottom: var(--space-sm);
+  }
+
+  .components-sidebar section:first-of-type h3 {
+    margin-top: 0;
+  }
+
+  .components-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .components-sidebar li {
+    margin: 0;
+  }
+
+  .components-sidebar a {
+    display: block;
+    padding: var(--space-xs) var(--space-sm);
+    color: var(--color-text-primary);
+    text-decoration: none;
+    border-radius: var(--radius-sm);
+  }
+
+  .components-sidebar a:hover {
+    background: var(--color-surface-hover);
+  }
+
+  .components-sidebar a.coming-soon {
+    color: var(--color-text-disabled);
+    pointer-events: none;
+  }
+
+  .components-content h1 {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--space-md);
+  }
+
+  .lead {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+    max-width: 600px;
+    margin-bottom: var(--space-2xl);
+  }
+
+  .component-grid {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .component-grid h2 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--space-md);
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-md);
+  }
+
+  .component-card {
+    display: block;
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  }
+
+  a.component-card:hover {
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-md);
+  }
+
+  .component-card--coming {
+    opacity: 0.6;
+  }
+
+  .component-card h3 {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-xs);
+  }
+
+  .component-card p {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-sm);
+  }
+
+  .status {
+    display: inline-block;
+    padding: var(--space-xs) var(--space-sm);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    border-radius: var(--radius-full);
+  }
+
+  .status--ready {
+    background: var(--color-success-light);
+    color: var(--color-success);
+  }
+
+  .status--coming {
+    background: var(--color-surface-active);
+    color: var(--color-text-secondary);
+  }
+</style>

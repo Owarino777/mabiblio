@@ -1,0 +1,20 @@
+{
+  "name": "@accessible-ui-kit/docs",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^2.0.3",
+    "astro": "^4.0.8"
+  },
+  "devDependencies": {
+    "@accessible-ui-kit/tokens": "workspace:*",
+    "@accessible-ui-kit/ui": "workspace:*"
+  }
+}
