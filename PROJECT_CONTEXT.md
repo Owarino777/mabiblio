@@ -9,6 +9,7 @@
 **Name:** Accessible UI Kit  
 **Type:** Documentation site + Component library  
 **Vision:** A Material Design-inspired component catalog with **excellence** in:
+
 - Accessibility (RGAA/WCAG compliance)
 - Eco-design (RGESN principles)
 - GDPR compliance (no tracking by default)
@@ -21,6 +22,7 @@
 ## 2. Scope V1 (MVP)
 
 ### Site Features
+
 - [ ] Homepage with value proposition + search + "Get Started"
 - [ ] Component catalog with categories (Forms, Navigation, Feedback, Data display, Overlays)
 - [ ] Component page template: Preview + Code + Variants + A11y + RGESN + Tests
@@ -28,38 +30,39 @@
 - [ ] Light/Dark theme with CSS custom properties
 
 ### Components V1
-| # | Component | Status | Priority |
-|---|-----------|--------|----------|
-| 1 | Button | ✅ Done | P0 |
-| 2 | TextField | Not started | P0 |
-| 3 | Checkbox | Not started | P0 |
-| 4 | Radio | Not started | P0 |
-| 5 | Switch | Not started | P0 |
-| 6 | Select (native + guidelines) | Not started | P1 |
-| 7 | Modal/Dialog | Not started | P0 |
-| 8 | Toast/Alert | Not started | P1 |
-| 9 | Tabs | Not started | P1 |
-| 10 | Breadcrumb | Not started | P1 |
-| 11 | Pagination | Not started | P1 |
-| 12 | Card | Not started | P1 |
-| 13 | Tooltip | Not started | P2 (optional) |
+
+| #   | Component                    | Status      | Priority      |
+| --- | ---------------------------- | ----------- | ------------- |
+| 1   | Button                       | ✅ Done     | P0            |
+| 2   | TextField                    | Not started | P0            |
+| 3   | Checkbox                     | Not started | P0            |
+| 4   | Radio                        | Not started | P0            |
+| 5   | Switch                       | Not started | P0            |
+| 6   | Select (native + guidelines) | Not started | P1            |
+| 7   | Modal/Dialog                 | Not started | P0            |
+| 8   | Toast/Alert                  | Not started | P1            |
+| 9   | Tabs                         | Not started | P1            |
+| 10  | Breadcrumb                   | Not started | P1            |
+| 11  | Pagination                   | Not started | P1            |
+| 12  | Card                         | Not started | P1            |
+| 13  | Tooltip                      | Not started | P2 (optional) |
 
 ---
 
 ## 3. Tech Stack
 
-| Layer | Technology | Reason |
-|-------|------------|--------|
-| SSG | Astro | Fast, static-first, MDX support |
-| Language | TypeScript (strict) | Type safety, maintainability |
-| Styling | Vanilla CSS + CSS variables | No runtime, eco-friendly |
-| Code highlighting | Shiki (built-in Astro) | Zero-JS syntax highlighting |
-| Unit tests | Vitest | Fast, TS-native |
-| E2E tests | Playwright | Cross-browser, a11y integration |
-| A11y tests | axe-core | Industry standard |
-| Linting | ESLint + Prettier | Consistency |
-| Package manager | pnpm | Fast, disk-efficient, monorepo-friendly |
-| CI | GitHub Actions | Standard, integrated |
+| Layer             | Technology                  | Reason                                  |
+| ----------------- | --------------------------- | --------------------------------------- |
+| SSG               | Astro                       | Fast, static-first, MDX support         |
+| Language          | TypeScript (strict)         | Type safety, maintainability            |
+| Styling           | Vanilla CSS + CSS variables | No runtime, eco-friendly                |
+| Code highlighting | Shiki (built-in Astro)      | Zero-JS syntax highlighting             |
+| Unit tests        | Vitest                      | Fast, TS-native                         |
+| E2E tests         | Playwright                  | Cross-browser, a11y integration         |
+| A11y tests        | axe-core                    | Industry standard                       |
+| Linting           | ESLint + Prettier           | Consistency                             |
+| Package manager   | pnpm                        | Fast, disk-efficient, monorepo-friendly |
+| CI                | GitHub Actions              | Standard, integrated                    |
 
 ---
 
@@ -88,6 +91,7 @@
 ## 5. Conventions
 
 ### Code
+
 - Comments in **English only**
 - TypeScript strict mode
 - No magic values — use tokens
@@ -95,15 +99,18 @@
 - No `innerHTML` with uncontrolled input
 
 ### Git
+
 - Conventional Commits: `feat:`, `fix:`, `docs:`, `chore:`, `test:`
 - Branch naming: `feat/component-name`, `fix/issue-description`
 
 ### Components
+
 - Each component in `/packages/ui/<component-name>/`
 - Must include: HTML, CSS, optional JS
 - Must document: keyboard interactions, ARIA usage, known pitfalls
 
 ### Testing
+
 - Unit tests for utilities and logic
 - E2E tests for keyboard navigation and focus management
 - axe-core scan for every component page
@@ -113,6 +120,7 @@
 ## 6. Definition of Done
 
 ### Global DoD
+
 - [x] Static build works
 - [ ] Lighthouse scores meet budgets
 - [ ] All tests pass (unit + e2e + a11y)
@@ -122,6 +130,7 @@
 - [ ] PROJECT_CONTEXT.md updated
 
 ### Component DoD
+
 - [ ] HTML/CSS/JS code (no framework)
 - [ ] All variants implemented
 - [ ] Integration snippet ready
@@ -137,6 +146,7 @@
 **Last updated:** 2026-01-18
 
 ### Completed
+
 - [x] PROJECT_CONTEXT.md created
 - [x] DECISIONS.md created (10 ADRs)
 - [x] CHANGELOG.md created
@@ -164,10 +174,12 @@
 - [x] ROADMAP.md
 
 ### In Progress
+
 - [ ] Install dependencies and verify build
 - [ ] Run and fix any test issues
 
 ### Next Up
+
 - [ ] TextField component
 - [ ] Checkbox component
 - [ ] Radio component
@@ -197,14 +209,14 @@
 
 ## 9. Performance Budgets (Target)
 
-| Metric | Budget |
-|--------|--------|
-| First Contentful Paint | < 1.5s |
-| Largest Contentful Paint | < 2.5s |
-| Total Blocking Time | < 200ms |
-| Cumulative Layout Shift | < 0.1 |
-| Total JS (initial) | < 50KB |
-| Total CSS (initial) | < 30KB |
+| Metric                   | Budget  |
+| ------------------------ | ------- |
+| First Contentful Paint   | < 1.5s  |
+| Largest Contentful Paint | < 2.5s  |
+| Total Blocking Time      | < 200ms |
+| Cumulative Layout Shift  | < 0.1   |
+| Total JS (initial)       | < 50KB  |
+| Total CSS (initial)      | < 30KB  |
 
 ---
 
@@ -228,4 +240,4 @@
 
 ---
 
-*This file is the source of truth for project state. Update after every significant change.*
+_This file is the source of truth for project state. Update after every significant change._

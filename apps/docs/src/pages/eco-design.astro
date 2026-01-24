@@ -6,19 +6,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <main id="main-content" class="docs-page">
     <article class="docs-content">
       <h1>Eco-Design</h1>
-      <p class="lead">
-        Building sustainable web experiences with minimal environmental impact.
-      </p>
+      <p class="lead">Building sustainable web experiences with minimal environmental impact.</p>
 
       <section id="why" aria-labelledby="why-heading">
         <h2 id="why-heading">Why Eco-Design Matters</h2>
         <p>
-          The internet accounts for approximately 4% of global CO2 emissions — more than the aviation industry.
-          Every kilobyte transferred, every computation performed, and every server request has an environmental cost.
+          The internet accounts for approximately 4% of global CO2 emissions — more than the
+          aviation industry. Every kilobyte transferred, every computation performed, and every
+          server request has an environmental cost.
         </p>
-        <p>
-          By building lighter, more efficient websites, we can:
-        </p>
+        <p>By building lighter, more efficient websites, we can:</p>
         <ul>
           <li>Reduce energy consumption and carbon emissions</li>
           <li>Improve performance for all users</li>
@@ -34,9 +31,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           We follow the <strong>Référentiel Général d'Écoconception de Services Numériques</strong> (RGESN),
           the French reference framework for eco-design of digital services.
         </p>
-        <p>
-          Key principles we apply:
-        </p>
+        <p>Key principles we apply:</p>
         <ul>
           <li><strong>Frugality:</strong> Only include what's necessary</li>
           <li><strong>Performance:</strong> Optimize every resource</li>
@@ -50,8 +45,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
         <h3>Zero JavaScript by Default</h3>
         <p>
-          Most components require no JavaScript at all. When JS is needed (e.g., for dialogs),
-          it's minimal and progressively enhanced.
+          Most components require no JavaScript at all. When JS is needed (e.g., for dialogs), it's
+          minimal and progressively enhanced.
         </p>
         <div class="stats-box">
           <div class="stat">
@@ -66,32 +61,30 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
         <h3>System Fonts</h3>
         <p>
-          We use the system font stack, saving 50-200 KB per page load.
-          Users see familiar fonts that render instantly.
+          We use the system font stack, saving 50-200 KB per page load. Users see familiar fonts
+          that render instantly.
         </p>
         <pre><code>font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;</code></pre>
 
         <h3>CSS Custom Properties</h3>
-        <p>
-          All theming uses CSS variables — no runtime JavaScript, no CSS-in-JS overhead.
-        </p>
+        <p>All theming uses CSS variables — no runtime JavaScript, no CSS-in-JS overhead.</p>
 
         <h3>No External Dependencies</h3>
         <p>
-          Zero third-party libraries for components. No npm packages to download,
-          no supply chain to audit.
+          Zero third-party libraries for components. No npm packages to download, no supply chain to
+          audit.
         </p>
 
         <h3>No Tracking</h3>
         <p>
-          No analytics, no trackers, no third-party requests by default.
-          Every external request has an environmental (and privacy) cost.
+          No analytics, no trackers, no third-party requests by default. Every external request has
+          an environmental (and privacy) cost.
         </p>
 
         <h3>Static Generation</h3>
         <p>
-          This site is statically generated — no server-side rendering, no database queries,
-          no server computation on each request.
+          This site is statically generated — no server-side rendering, no database queries, no
+          server computation on each request.
         </p>
       </section>
 
@@ -134,15 +127,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <h3>Carbon Footprint</h3>
         <p>
           You can estimate a page's carbon footprint using tools like
-          <a href="https://www.websitecarbon.com/" target="_blank" rel="noopener">Website Carbon Calculator</a>.
+          <a href="https://www.websitecarbon.com/" target="_blank" rel="noopener"
+            >Website Carbon Calculator</a
+          >.
         </p>
       </section>
 
       <section id="guidelines" aria-labelledby="guidelines-heading">
         <h2 id="guidelines-heading">Component Guidelines</h2>
-        <p>
-          Each component's documentation includes:
-        </p>
+        <p>Each component's documentation includes:</p>
         <ul>
           <li>Bundle size (minified and gzipped)</li>
           <li>JavaScript requirement (if any)</li>
@@ -154,11 +147,33 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <section id="resources" aria-labelledby="resources-heading">
         <h2 id="resources-heading">Resources</h2>
         <ul>
-          <li><a href="https://ecoresponsable.numerique.gouv.fr/publications/referentiel-general-ecoconception/" target="_blank" rel="noopener">RGESN (French)</a></li>
-          <li><a href="https://www.thegreenwebfoundation.org/" target="_blank" rel="noopener">The Green Web Foundation</a></li>
-          <li><a href="https://www.websitecarbon.com/" target="_blank" rel="noopener">Website Carbon Calculator</a></li>
-          <li><a href="https://sustainablewebdesign.org/" target="_blank" rel="noopener">Sustainable Web Design</a></li>
-          <li><a href="https://www.w3.org/community/sustyweb/" target="_blank" rel="noopener">W3C Sustainable Web Design Community Group</a></li>
+          <li>
+            <a
+              href="https://ecoresponsable.numerique.gouv.fr/publications/referentiel-general-ecoconception/"
+              target="_blank"
+              rel="noopener">RGESN (French)</a
+            >
+          </li>
+          <li>
+            <a href="https://www.thegreenwebfoundation.org/" target="_blank" rel="noopener"
+              >The Green Web Foundation</a
+            >
+          </li>
+          <li>
+            <a href="https://www.websitecarbon.com/" target="_blank" rel="noopener"
+              >Website Carbon Calculator</a
+            >
+          </li>
+          <li>
+            <a href="https://sustainablewebdesign.org/" target="_blank" rel="noopener"
+              >Sustainable Web Design</a
+            >
+          </li>
+          <li>
+            <a href="https://www.w3.org/community/sustyweb/" target="_blank" rel="noopener"
+              >W3C Sustainable Web Design Community Group</a
+            >
+          </li>
         </ul>
       </section>
     </article>
@@ -263,7 +278,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     margin: var(--space-md) 0;
   }
 
-  th, td {
+  th,
+  td {
     text-align: left;
     padding: var(--space-sm) var(--space-md);
     border-bottom: 1px solid var(--color-border);

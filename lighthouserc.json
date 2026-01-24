@@ -2,11 +2,7 @@
   "ci": {
     "collect": {
       "staticDistDir": "./apps/docs/dist",
-      "url": [
-        "/",
-        "/components/",
-        "/components/button/"
-      ]
+      "url": ["/", "/components/", "/components/button/"]
     },
     "assert": {
       "preset": "lighthouse:recommended",
