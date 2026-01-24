@@ -43,7 +43,7 @@
   /* Text colors - Meet WCAG AA (4.5:1 ratio) */
   --color-text-primary: #111827;
   --color-text-secondary: #4b5563;
-  --color-text-disabled: #9ca3af;
+  --color-text-disabled: #6b7280;
   --color-text-inverse: #ffffff;
 
   /* Border colors */
@@ -185,7 +185,7 @@
   /* Text colors */
   --color-text-primary: #f9fafb;
   --color-text-secondary: #d1d5db;
-  --color-text-disabled: #6b7280;
+  --color-text-disabled: #9ca3af;
   --color-text-inverse: #111827;
 
   /* Border colors */
