@@ -13,13 +13,24 @@ const { title, description = 'Accessible UI Kit - Web components built for acces
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
+    <meta name="theme-color" content="#0066cc" />
+    
+    <!-- Content Security Policy for XSS protection -->
+    <!-- Note: 'unsafe-inline' is required for Astro framework's scoped styles and hydration scripts -->
+    <!-- For production, consider moving to a nonce-based CSP when Astro supports it -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none';" />
+    
     <title>{title}</title>
 
     <!-- Eco-design: No external fonts, use system fonts -->
     <!-- GDPR: No third-party resources -->
-    <!-- Security: CSP-friendly, no inline scripts -->
+    <!-- Security: CSP for XSS protection -->
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="/icon-192.svg" />
 
     <!-- Preload critical CSS -->
     <link rel="stylesheet" href="/styles/tokens.css" />
