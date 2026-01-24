@@ -16,7 +16,8 @@ const { title, description = 'Accessible UI Kit - Web components built for acces
     <meta name="theme-color" content="#0066cc" />
     
     <!-- Content Security Policy for XSS protection -->
-    <!-- Strict CSP with nonce-based approach for maximum security -->
+    <!-- Note: 'unsafe-inline' is required for Astro framework's scoped styles and hydration scripts -->
+    <!-- For production, consider moving to a nonce-based CSP when Astro supports it -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none';" />
     
     <title>{title}</title>
