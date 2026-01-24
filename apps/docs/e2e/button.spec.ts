@@ -36,9 +36,9 @@ test.describe('Button Component', () => {
     test('buttons can be activated with Enter', async ({ page }) => {
       const button = page.locator('#preview .auk-btn--primary').first();
 
-      let clicked = false;
+      let _clicked = false;
       await page.exposeFunction('onButtonClick', () => {
-        clicked = true;
+        _clicked = true;
       });
 
       await button.evaluate((el) => {
