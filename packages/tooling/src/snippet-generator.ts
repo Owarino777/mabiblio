@@ -6,7 +6,7 @@
  */
 
 import { readFileSync, writeFileSync, existsSync } from 'fs';
-import { join, dirname } from 'path';
+import { join } from 'path';
 
 export interface SnippetConfig {
   componentName: string;
@@ -65,7 +65,7 @@ export function generateAllSnippets(
     const snippets = extractSnippets(config);
     writeSnippets(snippets, config.outputPath);
 
-    console.log(`Generated snippets for ${name}`);
+    console.warn(`Generated snippets for ${name}`);
   }
 }
 
