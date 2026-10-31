@@ -173,8 +173,7 @@
 }
 
 .auk-btn--loading .auk-btn__text {
-  /* Keep loading text in the accessibility tree while the spinner is displayed. */
-  opacity: 0;
+  visibility: hidden;
 }
 
 .auk-btn__spinner {
