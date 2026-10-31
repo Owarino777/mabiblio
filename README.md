@@ -15,12 +15,12 @@ This project provides a **web platform-first** component library focused on:
 
 ## 📦 Packages
 
-| Package | Description |
-|---------|-------------|
-| `@accessible-ui-kit/docs` | Documentation site (Astro) |
-| `@accessible-ui-kit/tokens` | Design tokens (CSS custom properties) |
-| `@accessible-ui-kit/ui` | UI components (HTML/CSS/JS) |
-| `@accessible-ui-kit/tooling` | Build scripts and utilities |
+| Package                      | Description                           |
+| ---------------------------- | ------------------------------------- |
+| `@accessible-ui-kit/docs`    | Documentation site (Astro)            |
+| `@accessible-ui-kit/tokens`  | Design tokens (CSS custom properties) |
+| `@accessible-ui-kit/ui`      | UI components (HTML/CSS/JS)           |
+| `@accessible-ui-kit/tooling` | Build scripts and utilities           |
 
 ## 🚀 Quick Start
 
@@ -61,6 +61,7 @@ pnpm test:a11y    # Run accessibility tests
 Visit the documentation site at `http://localhost:4321` after running `pnpm dev`.
 
 Each component includes:
+
 - Live preview and code snippets
 - Accessibility guidelines (keyboard interactions, ARIA)
 - Eco-design notes (bundle size, alternatives)
