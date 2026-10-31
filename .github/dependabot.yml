@@ -1,25 +1,25 @@
 version: 2
 updates:
-  - package-ecosystem: "npm"
+  - package-ecosystem: 'npm'
     directories:
-      - "/"
-      - "/apps/docs"
-      - "/packages/ui"
-      - "/packages/tokens"
-      - "/packages/tooling"
+      - '/'
+      - '/apps/docs'
+      - '/packages/ui'
+      - '/packages/tokens'
+      - '/packages/tooling'
     schedule:
-      interval: "daily"
-      time: "08:00"
-      timezone: "Europe/Paris"
+      interval: 'daily'
+      time: '08:00'
+      timezone: 'Europe/Paris'
     open-pull-requests-limit: 10
     groups:
       routine-updates:
-        applies-to: "version-updates"
-        patterns: ["*"]
-        update-types: ["minor", "patch"]
-  - package-ecosystem: "github-actions"
-    directory: "/"
+        applies-to: 'version-updates'
+        patterns: ['*']
+        update-types: ['minor', 'patch']
+  - package-ecosystem: 'github-actions'
+    directory: '/'
     schedule:
-      interval: "weekly"
-      day: "monday"
+      interval: 'weekly'
+      day: 'monday'
     open-pull-requests-limit: 3
