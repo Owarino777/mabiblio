@@ -6,17 +6,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <main id="main-content" class="docs-page">
     <article class="docs-content">
       <h1>Getting Started</h1>
-      <p class="lead">
-        Start using accessible components in minutes. No build step required.
-      </p>
+      <p class="lead">Start using accessible components in minutes. No build step required.</p>
 
       <section id="installation" aria-labelledby="installation-heading">
         <h2 id="installation-heading">Installation</h2>
 
         <h3>Option 1: Copy & Paste (Recommended)</h3>
         <p>
-          The simplest way to use these components. Just copy the HTML and CSS from any component page
-          and paste it into your project.
+          The simplest way to use these components. Just copy the HTML and CSS from any component
+          page and paste it into your project.
         </p>
         <ol>
           <li>Browse the <a href="/components">Components</a> catalog</li>
@@ -27,9 +25,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </ol>
 
         <h3>Option 2: Download the CSS</h3>
-        <p>
-          Download the complete CSS file with all components and tokens:
-        </p>
+        <p>Download the complete CSS file with all components and tokens:</p>
         <div class="code-block">
           <pre><code>&lt;link rel="stylesheet" href="https://cdn.example.com/accessible-ui-kit/1.0.0/styles.css"&gt;</code></pre>
         </div>
@@ -38,9 +34,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </p>
 
         <h3>Option 3: Clone the Repository</h3>
-        <p>
-          For full access to source files, tests, and documentation:
-        </p>
+        <p>For full access to source files, tests, and documentation:</p>
         <div class="code-block">
           <pre><code class="language-bash">git clone https://github.com/your-org/accessible-ui-kit.git
 cd accessible-ui-kit
@@ -52,8 +46,8 @@ pnpm dev</code></pre>
       <section id="design-tokens" aria-labelledby="tokens-heading">
         <h2 id="tokens-heading">Design Tokens</h2>
         <p>
-          All components use CSS custom properties (variables) for consistent styling.
-          Include the tokens file to enable theming:
+          All components use CSS custom properties (variables) for consistent styling. Include the
+          tokens file to enable theming:
         </p>
         <div class="code-block">
           <pre><code class="language-css" set:html={`/* Add to your CSS or include tokens.css */
@@ -84,16 +78,15 @@ pnpm dev</code></pre>
       <section id="dark-mode" aria-labelledby="dark-mode-heading">
         <h2 id="dark-mode-heading">Dark Mode</h2>
         <p>
-          Dark mode is built-in. Add <code>data-theme="dark"</code> to your <code>&lt;html&gt;</code> element:
+          Dark mode is built-in. Add <code>data-theme="dark"</code> to your <code>&lt;html&gt;</code
+          > element:
         </p>
         <div class="code-block">
           <pre><code class="language-html">&lt;html data-theme="dark"&gt;
   ...
 &lt;/html&gt;</code></pre>
         </div>
-        <p>
-          Or detect user preference automatically:
-        </p>
+        <p>Or detect user preference automatically:</p>
         <div class="code-block">
           <pre><code class="language-javascript" set:html={`// Check user preference
 const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -103,13 +96,19 @@ document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'ligh
 
       <section id="accessibility" aria-labelledby="a11y-heading">
         <h2 id="a11y-heading">Accessibility Guidelines</h2>
-        <p>
-          Every component follows these accessibility principles:
-        </p>
+        <p>Every component follows these accessibility principles:</p>
         <ul>
-          <li><strong>Semantic HTML:</strong> Uses correct elements (<code>&lt;button&gt;</code>, <code>&lt;nav&gt;</code>, etc.)</li>
-          <li><strong>Keyboard navigation:</strong> All interactive elements work with keyboard only</li>
-          <li><strong>Focus visibility:</strong> Clear focus indicators on all focusable elements</li>
+          <li>
+            <strong>Semantic HTML:</strong> Uses correct elements (<code>&lt;button&gt;</code>, <code
+              >&lt;nav&gt;</code
+            >, etc.)
+          </li>
+          <li>
+            <strong>Keyboard navigation:</strong> All interactive elements work with keyboard only
+          </li>
+          <li>
+            <strong>Focus visibility:</strong> Clear focus indicators on all focusable elements
+          </li>
           <li><strong>Screen reader support:</strong> Proper ARIA attributes where needed</li>
           <li><strong>Color contrast:</strong> Meets WCAG AA standards (4.5:1 for text)</li>
           <li><strong>Motion:</strong> Respects <code>prefers-reduced-motion</code> preference</li>
@@ -121,9 +120,7 @@ document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'ligh
 
       <section id="browser-support" aria-labelledby="browser-heading">
         <h2 id="browser-heading">Browser Support</h2>
-        <p>
-          Components support all modern browsers:
-        </p>
+        <p>Components support all modern browsers:</p>
         <ul>
           <li>Chrome / Edge (last 2 versions)</li>
           <li>Firefox (last 2 versions)</li>
@@ -131,9 +128,7 @@ document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'ligh
           <li>iOS Safari (last 2 versions)</li>
           <li>Android Chrome (last 2 versions)</li>
         </ul>
-        <p>
-          We use only stable CSS features. No experimental APIs or polyfills required.
-        </p>
+        <p>We use only stable CSS features. No experimental APIs or polyfills required.</p>
       </section>
 
       <section id="next-steps" aria-labelledby="next-heading">
@@ -194,7 +189,8 @@ document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'ligh
     margin-bottom: var(--space-md);
   }
 
-  .docs-content ul, .docs-content ol {
+  .docs-content ul,
+  .docs-content ol {
     margin-bottom: var(--space-md);
     padding-left: var(--space-xl);
   }
