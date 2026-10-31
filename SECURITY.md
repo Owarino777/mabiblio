@@ -24,24 +24,28 @@ We will respond within 48 hours and work with you to resolve the issue.
 This project follows these security practices:
 
 ### Code
+
 - No `innerHTML` with uncontrolled input
 - No `eval()` or `Function()` constructor
 - Input validation and sanitization
 - TypeScript strict mode enabled
 
 ### Dependencies
+
 - Regular dependency audits (`pnpm audit`)
 - Minimal dependency footprint
 - No dependencies with known vulnerabilities
 - Lockfile committed to repository
 
 ### Build & Deploy
+
 - No secrets in repository
 - Environment variables for sensitive data
 - Static output only (no server-side execution)
 - Content Security Policy headers recommended
 
 ### Data
+
 - No data collection by default
 - No third-party analytics
 - No cookies except strictly necessary
