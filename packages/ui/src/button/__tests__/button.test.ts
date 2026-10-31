@@ -1,5 +1,11 @@
 import { describe, it, expect } from 'vitest';
-import { getButtonClasses, getButtonHTML, getIconButtonHTML, BUTTON_VARIANTS, BUTTON_SIZES } from '../index';
+import {
+  getButtonClasses,
+  getButtonHTML,
+  getIconButtonHTML,
+  BUTTON_VARIANTS,
+  BUTTON_SIZES,
+} from '../index';
 
 describe('Button', () => {
   describe('getButtonClasses', () => {
