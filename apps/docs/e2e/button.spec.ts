@@ -124,9 +124,7 @@ test.describe('Button Component', () => {
 
   test.describe('Accessibility @a11y', () => {
     test('page has no accessibility violations', async ({ page }) => {
-      const results = await new AxeBuilder({ page })
-        .include('#main-content')
-        .analyze();
+      const results = await new AxeBuilder({ page }).include('#main-content').analyze();
 
       expect(results.violations).toEqual([]);
     });
@@ -137,9 +135,7 @@ test.describe('Button Component', () => {
         .withTags(['wcag2aa', 'wcag21aa'])
         .analyze();
 
-      const contrastViolations = results.violations.filter(
-        (v) => v.id === 'color-contrast'
-      );
+      const contrastViolations = results.violations.filter((v) => v.id === 'color-contrast');
       expect(contrastViolations).toEqual([]);
     });
 
