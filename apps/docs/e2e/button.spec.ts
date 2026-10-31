@@ -50,9 +50,8 @@ test.describe('Button Component', () => {
       await button.focus();
       await page.keyboard.press('Enter');
 
-      // Note: In real test, we'd check the click was triggered
-      // For this demo, we verify the button is focusable and Enter works
       await expect(button).toBeFocused();
+      await expect.poll(() => clicked).toBe(true);
     });
 
     test('buttons can be activated with Space', async ({ page }) => {
