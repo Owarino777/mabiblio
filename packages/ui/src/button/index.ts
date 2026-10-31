@@ -44,7 +44,7 @@ export const BUTTON_SIZES = {
 export function getButtonClasses(options: ButtonOptions = {}): string {
   const { variant = 'primary', size = 'md', disabled, loading, iconOnly } = options;
 
-  const classes = [BUTTON_VARIANTS[variant], BUTTON_SIZES[size]];
+  const classes: string[] = [BUTTON_VARIANTS[variant], BUTTON_SIZES[size]];
 
   if (disabled) classes.push('auk-btn--disabled');
   if (loading) classes.push('auk-btn--loading');
