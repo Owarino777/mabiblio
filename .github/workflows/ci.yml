@@ -37,6 +37,12 @@ jobs:
 
       - name: Check formatting
         run: pnpm format:check
+      - name: Show expected formatting for Dependabot YAML
+        if: failure()
+        run: |
+          echo PRETTIER_BEGIN
+          pnpm exec prettier .github/dependabot.yml
+          echo PRETTIER_END
 
       - name: Type check
         run: pnpm typecheck
