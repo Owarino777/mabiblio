@@ -92,6 +92,7 @@ packages/ui/src/<component-name>/__tests__/
 ```
 
 E2E and a11y tests go in:
+
 ```
 apps/docs/e2e/<component-name>.spec.ts
 ```
