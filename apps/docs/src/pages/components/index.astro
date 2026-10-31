@@ -236,7 +236,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   }
 
   .component-card--coming {
-    opacity: 0.6;
+    /* Use surface and text tokens rather than opacity, which lowers text contrast. */
+    background: var(--color-surface);
+    border-style: dashed;
   }
 
   .component-card h3 {
