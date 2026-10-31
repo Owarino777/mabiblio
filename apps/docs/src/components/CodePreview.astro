@@ -42,7 +42,7 @@ function escapeHtml(text: string): string {
         <span class="code-preview__copy-text">Copier</span>
       </button>
     </div>
-    <pre class="code-preview__pre"><code id={uniqueId} class={`language-${language}`} set:html={escapeHtml(code)} /></pre>
+    <pre class="code-preview__pre" tabindex="0"><code id={uniqueId} class={`language-${language}`} set:html={escapeHtml(code)} /></pre>
   </div>
 </div>
 
