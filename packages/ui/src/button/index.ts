@@ -66,8 +66,11 @@ export function getButtonHTML(
   const disabledAttr = disabled ? 'disabled' : '';
   const ariaDisabled = disabled ? 'aria-disabled="true"' : '';
   const ariaBusy = loading ? 'aria-busy="true"' : '';
+  const accessibleLabel = loading
+    ? `aria-label="${text.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;')}"`
+    : '';
 
-  return `<button type="${type}" class="${classes}" ${disabledAttr} ${ariaDisabled} ${ariaBusy}>
+  return `<button type="${type}" class="${classes}" ${disabledAttr} ${ariaDisabled} ${ariaBusy} ${accessibleLabel}>
   ${loading ? '<span class="auk-btn__spinner" aria-hidden="true"></span>' : ''}
   <span class="auk-btn__text">${text}</span>
 </button>`;
