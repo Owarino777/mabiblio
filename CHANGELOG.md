@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 #### 2026-01-18 — Project Setup (Iteration 0)
 
 **Documentation**
+
 - `PROJECT_CONTEXT.md`: Project overview, scope, stack, conventions, current state
 - `DECISIONS.md`: 10 Architecture Decision Records (ADR-001 to ADR-010)
 - `CHANGELOG.md`: This changelog file
@@ -24,6 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `README.md`: Project introduction and quick start
 
 **Monorepo Structure**
+
 - `package.json`: Root package with workspace scripts
 - `pnpm-workspace.yaml`: pnpm workspace configuration
 - `tsconfig.json`: TypeScript configuration (strict mode)
@@ -33,6 +35,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `.gitignore`: Git ignore patterns
 
 **Packages**
+
 - `packages/tokens`: Design tokens package
   - CSS custom properties for colors, spacing, typography, etc.
   - TypeScript type definitions for tokens
@@ -47,6 +50,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Snippet generator utility
 
 **Documentation Site (`apps/docs`)**
+
 - Astro configuration with MDX support
 - Base layout with header, footer, skip link
 - Theme toggle (light/dark)
@@ -62,12 +66,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Design tokens CSS
 
 **Testing**
+
 - `vitest.config.ts`: Vitest configuration
 - `playwright.config.ts`: Playwright configuration
 - Button unit tests (getButtonClasses, getButtonHTML)
 - Button E2E tests (keyboard navigation, focus, axe-core)
 
 **CI/CD**
+
 - `.github/workflows/ci.yml`: GitHub Actions workflow
   - Lint job (ESLint, Prettier, TypeScript)
   - Unit test job
@@ -77,12 +83,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `lighthouserc.json`: Lighthouse CI configuration with performance budgets
 
 ### Changed
+
 - N/A
 
 ### Fixed
+
 - N/A
 
 ### Removed
+
 - N/A
 
 ---
@@ -90,11 +99,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.0.0] — 2026-01-18
 
 ### Added
+
 - Initial project creation
 
 ---
 
-*Format for entries:*
+_Format for entries:_
+
 ```
 - **YYYY-MM-DD** — <type>: <description>
   - Files: `path/to/file`

@@ -28,7 +28,8 @@ import CodePreview from '../../components/CodePreview.astro';
         <header>
           <h1>Button</h1>
           <p class="lead">
-            Buttons trigger actions. They communicate what will happen when the user interacts with them.
+            Buttons trigger actions. They communicate what will happen when the user interacts with
+            them.
           </p>
         </header>
 
@@ -37,12 +38,12 @@ import CodePreview from '../../components/CodePreview.astro';
           <h2 id="overview-heading">Overview</h2>
           <p>
             The Button component provides three variants for different levels of emphasis:
-            <strong>primary</strong> for main actions, <strong>secondary</strong> for
-            supporting actions, and <strong>tertiary</strong> (ghost) for low-emphasis actions.
+            <strong>primary</strong> for main actions, <strong>secondary</strong> for supporting actions,
+            and <strong>tertiary</strong> (ghost) for low-emphasis actions.
           </p>
           <p>
-            All buttons are fully keyboard accessible with visible focus indicators and
-            support loading states for asynchronous operations.
+            All buttons are fully keyboard accessible with visible focus indicators and support
+            loading states for asynchronous operations.
           </p>
         </section>
 
@@ -52,8 +53,8 @@ import CodePreview from '../../components/CodePreview.astro';
 
           <h3>Primary</h3>
           <p>Use for the main action on a page or in a form. Limit to one per section.</p>
-          <CodePreview 
-            title="Primary Button" 
+          <CodePreview
+            title="Primary Button"
             code={`<button type="button" class="auk-btn auk-btn--primary auk-btn--md">
   Save Changes
 </button>`}
@@ -65,34 +66,30 @@ import CodePreview from '../../components/CodePreview.astro';
 
           <h3>Secondary</h3>
           <p>Use for supporting actions that are important but not primary.</p>
-          <CodePreview 
-            title="Secondary Button" 
+          <CodePreview
+            title="Secondary Button"
             code={`<button type="button" class="auk-btn auk-btn--secondary auk-btn--md">
   Cancel
 </button>`}
           >
-            <button type="button" class="auk-btn auk-btn--secondary auk-btn--md">
-              Cancel
-            </button>
+            <button type="button" class="auk-btn auk-btn--secondary auk-btn--md"> Cancel</button>
           </CodePreview>
 
           <h3>Tertiary (Ghost)</h3>
           <p>Use for low-emphasis actions, often paired with primary or secondary buttons.</p>
-          <CodePreview 
-            title="Tertiary Button" 
+          <CodePreview
+            title="Tertiary Button"
             code={`<button type="button" class="auk-btn auk-btn--tertiary auk-btn--md">
   Learn More
 </button>`}
           >
-            <button type="button" class="auk-btn auk-btn--tertiary auk-btn--md">
-              Learn More
-            </button>
+            <button type="button" class="auk-btn auk-btn--tertiary auk-btn--md"> Learn More</button>
           </CodePreview>
 
           <h3>All Variants</h3>
           <p>Side by side comparison of all three variants.</p>
-          <CodePreview 
-            title="All Variants" 
+          <CodePreview
+            title="All Variants"
             code={`<!-- Primary -->
 <button type="button" class="auk-btn auk-btn--primary auk-btn--md">
   Primary
@@ -118,9 +115,9 @@ import CodePreview from '../../components/CodePreview.astro';
         <section id="sizes" aria-labelledby="sizes-heading">
           <h2 id="sizes-heading">Sizes</h2>
           <p>Three sizes are available: small, medium (default), and large.</p>
-          
-          <CodePreview 
-            title="Small" 
+
+          <CodePreview
+            title="Small"
             code={`<button type="button" class="auk-btn auk-btn--primary auk-btn--sm">
   Small Button
 </button>`}
@@ -130,8 +127,8 @@ import CodePreview from '../../components/CodePreview.astro';
             </button>
           </CodePreview>
 
-          <CodePreview 
-            title="Medium (Default)" 
+          <CodePreview
+            title="Medium (Default)"
             code={`<button type="button" class="auk-btn auk-btn--primary auk-btn--md">
   Medium Button
 </button>`}
@@ -141,8 +138,8 @@ import CodePreview from '../../components/CodePreview.astro';
             </button>
           </CodePreview>
 
-          <CodePreview 
-            title="Large" 
+          <CodePreview
+            title="Large"
             code={`<button type="button" class="auk-btn auk-btn--primary auk-btn--lg">
   Large Button
 </button>`}
@@ -153,8 +150,8 @@ import CodePreview from '../../components/CodePreview.astro';
           </CodePreview>
 
           <h3>All Sizes Comparison</h3>
-          <CodePreview 
-            title="Size Comparison" 
+          <CodePreview
+            title="Size Comparison"
             code={`<button type="button" class="auk-btn auk-btn--primary auk-btn--sm">Small</button>
 <button type="button" class="auk-btn auk-btn--primary auk-btn--md">Medium</button>
 <button type="button" class="auk-btn auk-btn--primary auk-btn--lg">Large</button>`}
@@ -171,10 +168,11 @@ import CodePreview from '../../components/CodePreview.astro';
 
           <h3>Disabled</h3>
           <p>
-            Use for actions that are not currently available. The button cannot be focused or clicked.
+            Use for actions that are not currently available. The button cannot be focused or
+            clicked.
           </p>
-          <CodePreview 
-            title="Disabled Buttons" 
+          <CodePreview
+            title="Disabled Buttons"
             code={`<!-- Disabled Primary -->
 <button type="button" class="auk-btn auk-btn--primary auk-btn--md" disabled aria-disabled="true">
   Disabled Primary
@@ -185,10 +183,20 @@ import CodePreview from '../../components/CodePreview.astro';
   Disabled Secondary
 </button>`}
           >
-            <button type="button" class="auk-btn auk-btn--primary auk-btn--md" disabled aria-disabled="true">
+            <button
+              type="button"
+              class="auk-btn auk-btn--primary auk-btn--md"
+              disabled
+              aria-disabled="true"
+            >
               Disabled Primary
             </button>
-            <button type="button" class="auk-btn auk-btn--secondary auk-btn--md" disabled aria-disabled="true">
+            <button
+              type="button"
+              class="auk-btn auk-btn--secondary auk-btn--md"
+              disabled
+              aria-disabled="true"
+            >
               Disabled Secondary
             </button>
           </CodePreview>
@@ -197,14 +205,19 @@ import CodePreview from '../../components/CodePreview.astro';
           <p>
             Use when an action is in progress. The button shows a spinner and is not interactive.
           </p>
-          <CodePreview 
-            title="Loading Button" 
-            code={`<button type="button" class="auk-btn auk-btn--primary auk-btn--md auk-btn--loading" aria-busy="true">
+          <CodePreview
+            title="Loading Button"
+            code={`<button type="button" class="auk-btn auk-btn--primary auk-btn--md auk-btn--loading" aria-label="Saving..." aria-busy="true">
   <span class="auk-btn__spinner" aria-hidden="true"></span>
   <span class="auk-btn__text">Saving...</span>
 </button>`}
           >
-            <button type="button" class="auk-btn auk-btn--primary auk-btn--md auk-btn--loading" aria-busy="true">
+            <button
+              type="button"
+              class="auk-btn auk-btn--primary auk-btn--md auk-btn--loading"
+              aria-label="Saving..."
+              aria-busy="true"
+            >
               <span class="auk-btn__spinner" aria-hidden="true"></span>
               <span class="auk-btn__text">Saving...</span>
             </button>
@@ -214,13 +227,13 @@ import CodePreview from '../../components/CodePreview.astro';
         <!-- Icon Buttons -->
         <section id="icon-buttons" aria-labelledby="icon-buttons-heading">
           <h2 id="icon-buttons-heading">Icon Buttons</h2>
-          
+
           <h3>Icon Only</h3>
           <p>
             Icon-only buttons must have an <code>aria-label</code> for screen reader users.
           </p>
-          <CodePreview 
-            title="Icon-Only Buttons" 
+          <CodePreview
+            title="Icon-Only Buttons"
             code={`<!-- Close button -->
 <button type="button" 
   class="auk-btn auk-btn--primary auk-btn--md auk-btn--icon-only" 
@@ -239,22 +252,47 @@ import CodePreview from '../../components/CodePreview.astro';
   </svg>
 </button>`}
           >
-            <button type="button" class="auk-btn auk-btn--primary auk-btn--md auk-btn--icon-only" aria-label="Close">
-              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-                <path d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"/>
+            <button
+              type="button"
+              class="auk-btn auk-btn--primary auk-btn--md auk-btn--icon-only"
+              aria-label="Close"
+            >
+              <svg
+                aria-hidden="true"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                ></path>
               </svg>
             </button>
-            <button type="button" class="auk-btn auk-btn--secondary auk-btn--md auk-btn--icon-only" aria-label="Settings">
-              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
+            <button
+              type="button"
+              class="auk-btn auk-btn--secondary auk-btn--md auk-btn--icon-only"
+              aria-label="Settings"
+            >
+              <svg
+                aria-hidden="true"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"
+                  clip-rule="evenodd"></path>
               </svg>
             </button>
           </CodePreview>
 
           <h3>With Text and Icon</h3>
           <p>Icons can be combined with text for enhanced clarity.</p>
-          <CodePreview 
-            title="Button with Icon" 
+          <CodePreview
+            title="Button with Icon"
             code={`<button type="button" class="auk-btn auk-btn--primary auk-btn--md">
   <svg aria-hidden="true" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
     <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd"/>
@@ -263,8 +301,17 @@ import CodePreview from '../../components/CodePreview.astro';
 </button>`}
           >
             <button type="button" class="auk-btn auk-btn--primary auk-btn--md">
-              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd"/>
+              <svg
+                aria-hidden="true"
+                width="16"
+                height="16"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+                  clip-rule="evenodd"></path>
               </svg>
               Add Item
             </button>
@@ -325,7 +372,11 @@ import CodePreview from '../../components/CodePreview.astro';
 
           <h3>Full CSS Source</h3>
           <p>
-            <a href="https://github.com/your-org/accessible-ui-kit/blob/main/packages/ui/src/button/button.css" target="_blank" rel="noopener">
+            <a
+              href="https://github.com/your-org/accessible-ui-kit/blob/main/packages/ui/src/button/button.css"
+              target="_blank"
+              rel="noopener"
+            >
               View button.css on GitHub →
             </a>
           </p>
@@ -351,7 +402,9 @@ import CodePreview from '../../components/CodePreview.astro';
               <h3>✗ Don't</h3>
               <ul>
                 <li>Don't use vague labels ("Click here", "OK")</li>
-                <li>Don't use <code>&lt;div&gt;</code> or <code>&lt;a&gt;</code> for button actions</li>
+                <li>
+                  Don't use <code>&lt;div&gt;</code> or <code>&lt;a&gt;</code> for button actions
+                </li>
                 <li>Don't disable focus on disabled buttons</li>
                 <li>Don't rely on color alone to convey meaning</li>
                 <li>Don't use multiple primary buttons in the same area</li>
@@ -623,7 +676,8 @@ pnpm test:a11y --grep button`}
     border-collapse: collapse;
   }
 
-  th, td {
+  th,
+  td {
     text-align: left;
     padding: var(--space-sm) var(--space-md);
     border-bottom: 1px solid var(--color-border);
@@ -651,7 +705,8 @@ pnpm test:a11y --grep button`}
     margin: var(--space-md) 0;
   }
 
-  .do, .dont {
+  .do,
+  .dont {
     padding: var(--space-lg);
     border-radius: var(--radius-md);
   }
@@ -664,17 +719,20 @@ pnpm test:a11y --grep button`}
     background: var(--color-error-light);
   }
 
-  .do h3, .dont h3 {
+  .do h3,
+  .dont h3 {
     margin-top: 0;
     margin-bottom: var(--space-sm);
   }
 
-  .do ul, .dont ul {
+  .do ul,
+  .dont ul {
     margin: 0;
     padding-left: var(--space-lg);
   }
 
-  .do li, .dont li {
+  .do li,
+  .dont li {
     margin-bottom: var(--space-xs);
   }
 

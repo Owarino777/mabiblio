@@ -12,10 +12,10 @@ test.describe('Button Component', () => {
   });
 
   test('preview buttons are visible', async ({ page }) => {
-    const preview = page.locator('#preview .preview-box');
-    await expect(preview.locator('.auk-btn--primary')).toBeVisible();
-    await expect(preview.locator('.auk-btn--secondary')).toBeVisible();
-    await expect(preview.locator('.auk-btn--tertiary')).toBeVisible();
+    const preview = page.locator('#variants');
+    await expect(preview.locator('.auk-btn--primary').first()).toBeVisible();
+    await expect(preview.locator('.auk-btn--secondary').first()).toBeVisible();
+    await expect(preview.locator('.auk-btn--tertiary').first()).toBeVisible();
   });
 
   test.describe('Keyboard Navigation', () => {
@@ -26,7 +26,7 @@ test.describe('Button Component', () => {
       await page.keyboard.press('Tab'); // Nav items...
 
       // Keep tabbing until we reach a button in preview
-      const primaryButton = page.locator('#preview .auk-btn--primary');
+      const primaryButton = page.locator('#variants .code-preview__demo .auk-btn--primary').first();
 
       // Focus the button directly for testing
       await primaryButton.focus();
@@ -34,7 +34,7 @@ test.describe('Button Component', () => {
     });
 
     test('buttons can be activated with Enter', async ({ page }) => {
-      const button = page.locator('#preview .auk-btn--primary').first();
+      const button = page.locator('#variants .code-preview__demo .auk-btn--primary').first();
 
       let clicked = false;
       await page.exposeFunction('onButtonClick', () => {
@@ -50,13 +50,12 @@ test.describe('Button Component', () => {
       await button.focus();
       await page.keyboard.press('Enter');
 
-      // Note: In real test, we'd check the click was triggered
-      // For this demo, we verify the button is focusable and Enter works
       await expect(button).toBeFocused();
+      await expect.poll(() => clicked).toBe(true);
     });
 
     test('buttons can be activated with Space', async ({ page }) => {
-      const button = page.locator('#preview .auk-btn--secondary').first();
+      const button = page.locator('#variants .code-preview__demo .auk-btn--secondary').first();
       await button.focus();
       await page.keyboard.press('Space');
       await expect(button).toBeFocused();
@@ -65,7 +64,7 @@ test.describe('Button Component', () => {
 
   test.describe('Focus Visibility', () => {
     test('focus ring is visible when focused', async ({ page }) => {
-      const button = page.locator('#preview .auk-btn--primary').first();
+      const button = page.locator('#variants .code-preview__demo .auk-btn--primary').first();
       await button.focus();
 
       // Check that outline is visible (not none or 0)
@@ -125,9 +124,7 @@ test.describe('Button Component', () => {
 
   test.describe('Accessibility @a11y', () => {
     test('page has no accessibility violations', async ({ page }) => {
-      const results = await new AxeBuilder({ page })
-        .include('#main-content')
-        .analyze();
+      const results = await new AxeBuilder({ page }).include('#main-content').analyze();
 
       expect(results.violations).toEqual([]);
     });
@@ -138,9 +135,7 @@ test.describe('Button Component', () => {
         .withTags(['wcag2aa', 'wcag21aa'])
         .analyze();
 
-      const contrastViolations = results.violations.filter(
-        (v) => v.id === 'color-contrast'
-      );
+      const contrastViolations = results.violations.filter((v) => v.id === 'color-contrast');
       expect(contrastViolations).toEqual([]);
     });
 

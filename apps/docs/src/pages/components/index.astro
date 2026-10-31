@@ -58,8 +58,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <div class="components-content">
         <h1>Component Library</h1>
         <p class="lead">
-          Accessible, eco-friendly UI components ready to copy and paste.
-          Each component is built with web standards, minimal JavaScript, and full keyboard support.
+          Accessible, eco-friendly UI components ready to copy and paste. Each component is built
+          with web standards, minimal JavaScript, and full keyboard support.
         </p>
 
         <section class="component-grid" aria-labelledby="forms-heading">
@@ -225,7 +225,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
     text-decoration: none;
-    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+    transition:
+      border-color var(--transition-fast),
+      box-shadow var(--transition-fast);
   }
 
   a.component-card:hover {
@@ -234,7 +236,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   }
 
   .component-card--coming {
-    opacity: 0.6;
+    /* Use surface and text tokens rather than opacity, which lowers text contrast. */
+    background: var(--color-surface);
+    border-style: dashed;
   }
 
   .component-card h3 {

@@ -1,5 +1,11 @@
 import { describe, it, expect } from 'vitest';
-import { getButtonClasses, getButtonHTML, getIconButtonHTML, BUTTON_VARIANTS, BUTTON_SIZES } from '../index';
+import {
+  getButtonClasses,
+  getButtonHTML,
+  getIconButtonHTML,
+  BUTTON_VARIANTS,
+  BUTTON_SIZES,
+} from '../index';
 
 describe('Button', () => {
   describe('getButtonClasses', () => {
@@ -74,7 +80,13 @@ describe('Button', () => {
     it('should add aria-busy when loading', () => {
       const html = getButtonHTML('Loading', { loading: true });
       expect(html).toContain('aria-busy="true"');
+      expect(html).toContain('aria-label="Loading"');
       expect(html).toContain('auk-btn__spinner');
+    });
+
+    it('should escape special characters in a loading button label', () => {
+      const html = getButtonHTML('Save "changes" & close', { loading: true });
+      expect(html).toContain('aria-label="Save &quot;changes&quot; &amp; close"');
     });
   });
 

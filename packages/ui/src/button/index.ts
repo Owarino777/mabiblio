@@ -44,7 +44,7 @@ export const BUTTON_SIZES = {
 export function getButtonClasses(options: ButtonOptions = {}): string {
   const { variant = 'primary', size = 'md', disabled, loading, iconOnly } = options;
 
-  const classes = [BUTTON_VARIANTS[variant], BUTTON_SIZES[size]];
+  const classes: string[] = [BUTTON_VARIANTS[variant], BUTTON_SIZES[size]];
 
   if (disabled) classes.push('auk-btn--disabled');
   if (loading) classes.push('auk-btn--loading');
@@ -66,8 +66,11 @@ export function getButtonHTML(
   const disabledAttr = disabled ? 'disabled' : '';
   const ariaDisabled = disabled ? 'aria-disabled="true"' : '';
   const ariaBusy = loading ? 'aria-busy="true"' : '';
+  const accessibleLabel = loading
+    ? `aria-label="${text.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;')}"`
+    : '';
 
-  return `<button type="${type}" class="${classes}" ${disabledAttr} ${ariaDisabled} ${ariaBusy}>
+  return `<button type="${type}" class="${classes}" ${disabledAttr} ${ariaDisabled} ${ariaBusy} ${accessibleLabel}>
   ${loading ? '<span class="auk-btn__spinner" aria-hidden="true"></span>' : ''}
   <span class="auk-btn__text">${text}</span>
 </button>`;
