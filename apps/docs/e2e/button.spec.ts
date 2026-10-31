@@ -12,10 +12,10 @@ test.describe('Button Component', () => {
   });
 
   test('preview buttons are visible', async ({ page }) => {
-    const preview = page.locator('#preview .preview-box');
-    await expect(preview.locator('.auk-btn--primary')).toBeVisible();
-    await expect(preview.locator('.auk-btn--secondary')).toBeVisible();
-    await expect(preview.locator('.auk-btn--tertiary')).toBeVisible();
+    const preview = page.locator('#variants');
+    await expect(preview.locator('.auk-btn--primary').first()).toBeVisible();
+    await expect(preview.locator('.auk-btn--secondary').first()).toBeVisible();
+    await expect(preview.locator('.auk-btn--tertiary').first()).toBeVisible();
   });
 
   test.describe('Keyboard Navigation', () => {
@@ -26,7 +26,7 @@ test.describe('Button Component', () => {
       await page.keyboard.press('Tab'); // Nav items...
 
       // Keep tabbing until we reach a button in preview
-      const primaryButton = page.locator('#preview .auk-btn--primary');
+      const primaryButton = page.locator('#variants .code-preview__demo .auk-btn--primary').first();
 
       // Focus the button directly for testing
       await primaryButton.focus();
@@ -34,7 +34,7 @@ test.describe('Button Component', () => {
     });
 
     test('buttons can be activated with Enter', async ({ page }) => {
-      const button = page.locator('#preview .auk-btn--primary').first();
+      const button = page.locator('#variants .code-preview__demo .auk-btn--primary').first();
 
       let clicked = false;
       await page.exposeFunction('onButtonClick', () => {
@@ -55,7 +55,7 @@ test.describe('Button Component', () => {
     });
 
     test('buttons can be activated with Space', async ({ page }) => {
-      const button = page.locator('#preview .auk-btn--secondary').first();
+      const button = page.locator('#variants .code-preview__demo .auk-btn--secondary').first();
       await button.focus();
       await page.keyboard.press('Space');
       await expect(button).toBeFocused();
@@ -64,7 +64,7 @@ test.describe('Button Component', () => {
 
   test.describe('Focus Visibility', () => {
     test('focus ring is visible when focused', async ({ page }) => {
-      const button = page.locator('#preview .auk-btn--primary').first();
+      const button = page.locator('#variants .code-preview__demo .auk-btn--primary').first();
       await button.focus();
 
       // Check that outline is visible (not none or 0)
